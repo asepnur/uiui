@@ -1,55 +1,75 @@
-// Gulp.js configuration 
-var 
-  // modules 
-  gulp = require('gulp'),
-  newer = require('gulp-newer'),
-  imagemin = require('gulp-imagemin'),
-  htmlclean = require('gulp-htmlclean'),
-  concat = require('gulp-concat'),
-  deporder = require('gulp-deporder'),
-  stripdebug = require('gulp-strip-debug'),
-  uglify = require('gulp-uglify'),
+'use strict';
 
-  //development  mode?
-  devBuild = (process.env.NODE_ENV !=  'production'),
-  //folders 
-  folder =  {
-    src : 'src/',
-    build : 'build/'
-  }
-;
-// image processing 
-gulp.task( 'images', function() {
-  let out = folder.build + 'img/';
-  return gulp.src(folder.src + 'img/**/*')
-    .pipe(newer(out))
-    .pipe(imagemin({optimazatiionalLevel: 100 }))
-    .pipe(gulp.dest(out))
+const gulp =      require('gulp'),
+      inject=     require('gulp-inject'),
+      webserver=  require('gulp-webserver'),
+      sass=       require('gulp-sass')
+
+var err=        'error',
+    paths= {
+      // Source
+      srcHTML:    './src/html/*.html',  
+      srcSASS:    './src/sass/**/*.sass', 
+      srcJS:      './src/js/*.js', 
+
+      // Development
+      dev:        './dev', 
+      devCss:     './dev/css', 
+      devJs:      './dev/js', 
+      devHTML:    './dev', 
+
+      // Production 
+      // dist:       './dist',
+      // distIndex:  './dist/index.html',
+      // distCSS:    './dist/**/*.css',
+      // distJS:     './dist/**/*.js',
+    },
+    task= {
+      html: 'html',
+      sass: 'sass',
+      js:   'js'
+   }
+
+// HTML task
+gulp.task(task.html,  () => {
+  return gulp.src(paths.srcHTML)
+      .pipe(gulp.dest(paths.devHTML))
 })
 
-// HTML processing 
-gulp.task('html', ['images'], function() {
-  let
-    out = folder.build + 'html/',
-    page = gulp.src(folder.src + 'html/**/*')
-      .pipe(newer(out));
 
-  // minify production code
-  if (!devBuild) {
-    page = page.pipe(htmlclean())
-  }
-
-  return page.pipe(gulp.dest(out))
+// SASS
+gulp.task(task.sass,  () => {
+  return gulp.src(paths.srcSASS)
+    .pipe(sass.sync().on(err, sass.logError))
+    .pipe(gulp.dest(paths.devCss))
 })
 
-//Javascript processing 
-gulp.task('js', function(){
-  let jsbuild = gulp.src(folder.src + 'js/**/*')
-    .pipe(deporder())
-    .pipe(concat('main.js'))
-    if (!devBuild) {
-      jsbuild(stripdebug())
-      .pipe(uglify())
-    }
-    return jsbuild.pipe(gulp.dest(folder.build + 'js/'))
+// JS
+gulp.task(task.js,  () => {
+  return gulp.src(paths.srcJS).
+    pipe(gulp.dest(paths.devJs))
 })
+
+gulp.task('inject', ['task'], () => {
+  let css=  gulp.src([paths.devCss + '/*.css', paths.devJs + '/*.js'], {read: false})
+      
+  return gulp.src(paths.devHTML + '/*.html')
+    .pipe(inject(css, {ignorePath: 'dev', addRootSlash: false}))
+    .pipe(gulp.dest(paths.dev))
+})
+
+gulp.task('serve', ['inject'],  () => {
+  return gulp.src('./dev/')
+    .pipe(webserver({
+      port: 3000,
+      livereload: true
+    }))
+})
+
+gulp.task('watch', ['serve'],  () => {
+  gulp.watch('./src/**', ['inject'])
+})
+
+gulp.task('default', ['watch'])
+
+gulp.task('task', [task.html, task.js, task.sass])
