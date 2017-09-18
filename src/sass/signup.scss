@@ -1,0 +1,76 @@
+@import 'variable';
+@import 'grid';
+.btn{
+    border-radius: 3px;
+    font-family: $helvetica;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    width: 100%;
+    font-weight: normal;
+}
+.btn-blue{
+    @extend .btn;
+    background-color: $text-color;
+}
+input[type="text"], input[type="password"]{
+    border-radius: 3px;
+    border: .5px solid rgba($rgb-silver,.5);
+    outline: none;
+    padding: 12px 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: normal;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border: .5px solid rgba($rgb-silver,1);
+}
+
+.container input[type="password"]{
+    margin-bottom: 24px;
+    padding-right: 36px;
+}
+
+.head-page{
+    color: $text-color;
+    font-size: 2.2em;
+    margin: 0;
+}
+.message-term{
+    font-size: 11.5px;
+    color: $hx-silver;
+    margin: 5px;
+}
+.img-bg{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+.full-container{
+    margin-bottom: 60px;
+}
+.message-footer{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 11.5px;
+    color: $hx-silver;
+    margin: 5px;
+    text-align: center;
+}
+.wh-icon{
+    position: relative;
+    i[class="fa fa-eye"]{
+        position: absolute;
+        top: 35%;
+        right: 15px;
+        color: $hx-black;
+        font-weight: normal;
+        cursor: pointer;
+    }
+}

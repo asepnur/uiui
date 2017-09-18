@@ -32,7 +32,6 @@ html {
   b, strong {
 	font-weight: bold;
   }
-  
   h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
@@ -195,7 +194,7 @@ html {
 	//"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
-	color: $hex-black;
+	color: $hx-black;
 	background-color: $hx-white;
   }
   
@@ -254,22 +253,15 @@ html {
 	padding-left: 15px;
 	padding-right: 15px;
   }
-  
-  @media (min-width: 768px) {
-	.container {
-	  width: 750px;
+	.full-container{
+		margin: 0;
+		padding: 0;
 	}
-  }
+  
   
   @media (min-width: 992px) {
 	.container {
 	  width: 970px;
-	}
-  }
-  
-  @media (min-width: 1200px) {
-	.container {
-	  width: 1170px;
 	}
   }
   
@@ -721,3 +713,7 @@ html {
   .affix {
 	position: fixed;
   }
+	.itl{
+		font-style: italic;
+		color: $hx-black;
+	}

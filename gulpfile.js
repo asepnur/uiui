@@ -3,7 +3,8 @@
 const gulp =      require('gulp'),
       inject=     require('gulp-inject'),
       webserver=  require('gulp-webserver'),
-      sass=       require('gulp-sass')
+      sass=       require('gulp-sass'),
+      imagemin =  require('gulp-imagemin')
 
 var err=        'error',
     paths= {
@@ -11,11 +12,13 @@ var err=        'error',
       srcHTML:    './src/html/*.html',  
       srcSASS:    './src/sass/*.scss', 
       srcJS:      './src/js/*.js', 
+      srcImg:     './src/img/*.+(png|jpg|gif|svg)',
 
       // Development
       dev:        './dev', 
       devCss:     './dev/css', 
-      devJs:      './dev/js', 
+      devJs:      './dev/js',
+      devImg:     './dev/img', 
       devHTML:    './dev', 
 
       // Production 
@@ -27,7 +30,8 @@ var err=        'error',
     task= {
       html: 'html',
       sass: 'sass',
-      js:   'js'
+      js:   'js',
+      img:  'img'
    }
 
 // HTML task
@@ -48,6 +52,13 @@ gulp.task(task.sass,  () => {
 gulp.task(task.js,  () => {
   return gulp.src(paths.srcJS).
     pipe(gulp.dest(paths.devJs))
+})
+
+// IMG
+gulp.task(task.img, () =>{
+  return gulp.src(paths.srcImg)
+  .pipe(imagemin())
+  .pipe(gulp.dest(paths.devImg))
 })
 
 gulp.task('inject', ['task'], () => {
@@ -72,4 +83,4 @@ gulp.task('watch', ['serve'],  () => {
 
 gulp.task('default', ['watch'])
 
-gulp.task('task', [task.html, task.js, task.sass])
+gulp.task('task', [task.html, task.js, task.sass, task.img])
