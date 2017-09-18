@@ -9,7 +9,7 @@ var err=        'error',
     paths= {
       // Source
       srcHTML:    './src/html/*.html',  
-      srcSASS:    './src/sass/**/*.sass', 
+      srcSASS:    './src/sass/*.scss', 
       srcJS:      './src/js/*.js', 
 
       // Development
