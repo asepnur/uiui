@@ -9,7 +9,7 @@ input[type="text"], input[type="password"]{
     margin-top: 12px;
     margin-bottom: 12px;
     width: 100%;
-    font-size: 12px;
+    font-size: 1em;
     font-weight: normal;
 }
 input[type="text"]:focus, input[type="password"]:focus {
@@ -43,14 +43,12 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 ._me5f{
     @extend ._me;
-    padding-top: 20px;
-    text-align: center;
 }
 
 // Block Class
 ._bl{
-    margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 ._bl5b{
@@ -86,18 +84,23 @@ input[type="text"]:focus, input[type="password"]:focus {
     background-color: $text-color;
 }
 @media (min-width: 992px) {
-    body{
+    html,body{
+        height: 100%;
         background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     }
     ._bl5b{
-        width: 0;
-        height: 0;
-        background: none;
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background: url('/img/BG.png');
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     ._bl{
-        margin-top: 25%;
-        margin-left: auto;
-        margin-right: auto;
+        height: auto;
+        margin-top: 200px;
         background-color: rgba($rgb-white, 1);
+        border-radius: 10px;
     }
 }
