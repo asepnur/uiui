@@ -27,17 +27,17 @@ input[type="text"]:focus, input[type="password"]:focus {
     color: $text-color;
     margin: 0;
 }
-._he3p{
-    @extend ._he;
-    margin-top: 60px;
-    margin-bottom: 10px;
-}
-._he3p{
+._he3n{
     @extend ._he;
     margin-top: 50px;
     margin-bottom: 5px;
     text-align: center;
     line-height: 112%;
+}
+._he3p{
+    @extend ._he;
+    margin-top: 60px;
+    margin-bottom: 10px;
 }
 
 // Message Class
