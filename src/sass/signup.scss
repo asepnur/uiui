@@ -1,18 +1,6 @@
 @import 'variable';
 @import 'grid';
-.btn{
-    border-radius: 3px;
-    font-family: $helvetica;
-    border: none;
-    padding: 8px 20px;
-    color: white;
-    width: 100%;
-    font-weight: normal;
-}
-.btn-blue{
-    @extend .btn;
-    background-color: $text-color;
-}
+
 input[type="text"], input[type="password"]{
     border-radius: 3px;
     border: .5px solid rgba($rgb-silver,.5);
@@ -28,40 +16,51 @@ input[type="text"]:focus, input[type="password"]:focus {
     border: .5px solid rgba($rgb-silver,1);
 }
 
-.container input[type="password"]{
+._cn input[type="password"]{
     margin-bottom: 24px;
     padding-right: 36px;
 }
 
-.head-page{
-    color: $text-color;
+// Header Class 
+._he{
     font-size: 2.2em;
+    color: $text-color;
     margin: 0;
 }
-.message-term{
+._he3p{
+    @extend ._he;
+    margin-top: 30px;
+}
+
+// Message Class
+._me{
     font-size: 11.5px;
-    color: $hx-silver;
+    color: rgba($rgb-black, .5);
+}
+._me5t{
+    @extend ._me;
     margin: 5px;
 }
-.img-bg{
-    height: 200px;
-    width: 100%;
-    background-size: cover;
-}
-.full-container{
-    margin-bottom: 60px;
-}
-.message-footer{
+._me5f{
+    @extend ._me;
     padding-top: 20px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 11.5px;
-    color: $hx-silver;
-    margin: 5px;
-    text-align: center;
 }
-.wh-icon{
+
+// Block Class
+._bl{
+    margin: 0;
+    padding: 0;
+}
+
+._bl5b{
+    width: 100%;
+    height: 200px;
+    background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+// Containter Class
+._cn5g{
     position: relative;
     i[class="fa fa-eye"]{
         position: absolute;
@@ -70,5 +69,35 @@ input[type="text"]:focus, input[type="password"]:focus {
         color: $hx-black;
         font-weight: normal;
         cursor: pointer;
+    }
+}
+// Button Class
+._bt{
+    border-radius: 3px;
+    font-family: $helvetica;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    width: 100%;
+    font-weight: normal;
+}
+._bt3p{
+    @extend ._bt;
+    background-color: $text-color;
+}
+@media (min-width: 992px) {
+    body{
+        background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    }
+    ._bl5b{
+        width: 0;
+        height: 0;
+        background: none;
+    }
+    ._bl{
+        margin-top: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba($rgb-white, 1);
     }
 }
