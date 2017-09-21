@@ -12,7 +12,7 @@ var err=        'error',
       srcHTML:    './src/html/*.html',  
       srcSASS:    './src/sass/*.scss', 
       srcJS:      './src/js/*.js', 
-      srcImg:     './src/img/*.+(png|jpg|gif|svg)',
+      srcImg:     './src/img/**/*.+(png|jpg|gif|svg)',
 
       // Development
       dev:        './dev', 
