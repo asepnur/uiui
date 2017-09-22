@@ -1,4 +1,3 @@
-@import 'reset.scss';
 @import 'variable.scss';
 
 html {
@@ -35,6 +34,7 @@ html {
   }
   h1 {
 	font-size: 2em;
+	margin: 0.67em 0;
   }
   
   small {
@@ -69,6 +69,11 @@ html {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0;
+	margin-top: 0px;
+	border: 0;
+	border-top: 1px solid $_1grey;
+	margin-left: 15px;
+	margin-right: 15px;
   }
   
   pre {
@@ -241,7 +246,6 @@ html {
   }
   
   hr {
-	margin-top: 20px;
 	margin-bottom: 20px;
 	border: 0;
 	border-top: 1px solid $hx-silver;
@@ -255,13 +259,13 @@ html {
   
   @media (min-width: 992px) {
 	._cn {
-	  width: 100%;
+	  width: 970px;
 	}
   }
   
   ._ro {
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-left: -15px;
+	margin-right: -15px;
   }
   
   ._c5x31, ._c5m31, ._c5x32, ._c5m32, ._c5x33, ._c5m33, ._c5x34, ._c5m34, ._c5x35,  ._c5m35, ._c5x36, ._c5m36, ._c5x37,  ._c5m37, ._c5x38,  ._c5m38, ._c5x39,  ._c5m39, ._c5x310,  ._c5m310, ._c5x311, ._c5m311, ._c5x312, ._c5m312, {
@@ -658,7 +662,8 @@ html {
   
   ._ro {
 	&:before, &:after {
-	  content: "";
+	  content: " ";
+	  display: table;
 	}
   }
   

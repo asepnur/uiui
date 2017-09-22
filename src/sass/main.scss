@@ -27,6 +27,21 @@ input[type="text"]:focus, input[type="password"]:focus {
     color: $text-color;
     margin: 0;
 }
+._he5s{
+    color: $hx-black;
+    font-size: .9em;
+    margin-top: 15px;
+    @extend ._pd315;
+}
+._he5ma{
+    @extend ._he;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $hx-silver;
+    font-size: 1em;
+    font-weight: normal;
+    margin-left: 15px;
+}
 ._he3n{
     @extend ._he;
     margin-top: 50px;
@@ -74,9 +89,18 @@ input[type="text"]:focus, input[type="password"]:focus {
     font-size: 11.5px;
     color: rgba($rgb-black, .5);
 }
+
 ._me5t{
     @extend ._me;
     margin: 5px;
+}
+._me5tm{
+    @extend ._me;
+    @extend ._pd315;
+    margin-top: 20px;
+    color: $_blue;
+    text-align: right;
+    font-family: $PT-sans;
 }
 ._me5f{
     @extend ._me;
@@ -209,9 +233,31 @@ input[type="text"]:focus, input[type="password"]:focus {
         border-radius: 10px;
     }
 }
+// Padding 
+._pd{
+    padding:0;
+}
+._pd315{
+    padding : 5px 15px 5px 15px;
+}
+
+._pd320{
+    padding : 5px 20px 5px 20px;
+}
+
+
+// Image 
 ._i{
     margin: 0;
     padding: 0;
+}
+._i5h{
+    @extend ._pd315;
+    width: 55px;
+    margin-top: 15px;
+    padding-left: 0;
+    margin-left: 15px;
+
 }
 ._i5m{
     @extend ._i;
@@ -224,17 +270,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     margin-top: 76px;
 }
 
-// Padding 
-._pd{
-    padding:0;
-}
-._pd315{
-    padding: 15px;
-}
-
-._pd320{
-    padding: 20px;
-}
 
 
 //footer 
@@ -248,7 +283,33 @@ input[type="text"]:focus, input[type="password"]:focus {
     width: 100%;
     height: 60px;
 }
+._se{
+    @extend ._cn;
+    background-color: $hx-white;
+    border-radius: 3px;
+    margin: 15px;
+    box-shadow:  2px 2px 10px $hx-silver;
+    ._se5ct{
+        font-size: .9em;
+        color: rgba($rgb-black, .9);
+        margin-top: 0px;
+        font-family: $PT-sans;
+    }
+    ._se5cd{
+        font-size: .9em;
+        color: rgba($rgb-black, 1);
+        font-weight: bold;
+        margin-top: 0px;
+        font-family: $PT-sans;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+//
 html, 
 body {
     height: 100%;
+    background-color: $_1grey;
 }
