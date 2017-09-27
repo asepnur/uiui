@@ -27,20 +27,13 @@ input[type="text"]:focus, input[type="password"]:focus {
     color: $text-color;
     margin: 0;
 }
-._he5s{
-    color: $hx-black;
-    font-size: .9em;
-    margin-top: 15px;
-    @extend ._pd315;
-}
-._he5ma{
-    @extend ._he;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: $hx-silver;
-    font-size: 1em;
-    font-weight: normal;
+._he5md{
     margin-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: .9em;
+    color: rgba($hx-black,1);
+    font-weight: 600;
 }
 ._he3n{
     @extend ._he;
@@ -89,18 +82,15 @@ input[type="text"]:focus, input[type="password"]:focus {
     font-size: 11.5px;
     color: rgba($rgb-black, .5);
 }
-
+._me5ts{
+    color: $text-color;
+    font-size: .8em;
+    margin-top: 25px;
+    text-align: right;
+}
 ._me5t{
     @extend ._me;
     margin: 5px;
-}
-._me5tm{
-    @extend ._me;
-    @extend ._pd315;
-    margin-top: 20px;
-    color: $_blue;
-    text-align: right;
-    font-family: $PT-sans;
 }
 ._me5f{
     @extend ._me;
@@ -162,6 +152,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 ._cn3r{
     @extend ._cn;
 }
+._cn5n{
+    display: inline-block;
+}
 ._g{
     margin: -15px;
     margin-top:20px;
@@ -205,58 +198,130 @@ input[type="text"]:focus, input[type="password"]:focus {
     font-size: 1em;
 }
 @media (min-width: 992px) {
-    html,body{
+    ._f5a{
         height: 100%;
         background: url('/img/BG.png');
         background-size: cover;
     }
-    ._bl5b{
-        position: absolute;
-        width: 33.33333333%;
+    ._f5a{
+        ._bl{
+            height: auto;
+            margin-top: 180px;
+            background-color: rgba($rgb-white, 1);
+            border-radius: 10px;
+        }
+        ._bl5b{
+            position: absolute;
+            width: 33.33333333%;
+            height: 100%;
+            background: url('/img/lab.jpg');
+            opacity: .9;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        ._bl5c{
+            width: 0;
+            height: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+    ._n{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        visibility: visible;
         height: 100%;
-        background: url('/img/lab.jpg');
-        opacity: .9;
-        background-size: cover;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        background-color: $_dblue;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: auto;
+        overflow: auto;
+        z-index: 1;
+        list-style-type: none;
+        box-shadow: 0.5px 0.5px 1px $hx-black;
+        margin-left: 0;
+        -webkit-transition: all 0.5s linear; /* Safari and Chrome */
+        li{
+            padding: 15px;
+            a{
+                text-decoration: none;
+                color: $hx-white;
+                font-size: 30px;
+                text-align: center;
+                i{
+                    text-align: center;
+                }
+            }
+            &:hover{
+                color: white;
+                background-color: $_blue;
+
+            }
+            &:active{
+                color: white;
+                background-color: $_blue;
+            }
+        }  
     }
-    ._bl5c{
-        width: 0;
-        height: 0;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+    ._n51{
+        height: 75%;
     }
-    ._bl{
-        height: auto;
-        margin-top: 180px;
-        background-color: rgba($rgb-white, 1);
-        border-radius: 10px;
+    ._n52{
+        height: 25%;
+    } 
+    // Padding none
+    ._pd5n{
+        padding-left: 0;
+        padding-right: 0;
     }
-}
-// Padding 
-._pd{
-    padding:0;
-}
-._pd315{
-    padding : 5px 15px 5px 15px;
+    ._pd5m3n{
+        padding-left: 100px;
+    }
+    ._pd5m3nr{
+        padding-right: 15px;
+    }
+    ._he5md{
+        font-size: 1.3em;
+    }
+    ._me5ts{
+        font-size: 1em;
+    }
+    // Section Web
+    ._se{
+        ._se5t{
+            font-size: 1.1em;
+        }
+        ._se5ct{
+            font-size: 1em;
+        }
+        ._se5c{
+            font-size: 1em;
+        }
+        ._se5i{
+            width: 1em;
+        }
+        ._se5m{
+            font-size: .9em;
+        }
+    }
 }
 
-._pd320{
-    padding : 5px 20px 5px 20px;
-}
-
-
-// Image 
+// Image
 ._i{
     margin: 0;
     padding: 0;
 }
+._i3c{
+    @extend ._i;
+}
 ._i5h{
-    @extend ._pd315;
-    width: 55px;
-    margin-top: 15px;
-    padding-left: 0;
-    margin-left: 15px;
+    font-size: 2em;
+    margin-left: 0px;
+    margin-top: 20px;
+    display: inline-block;
 
 }
 ._i5m{
@@ -269,7 +334,26 @@ input[type="text"]:focus, input[type="password"]:focus {
     @extend ._i;
     margin-top: 76px;
 }
+._i3tb{
+    margin: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $hx-blue;
+    object-fit: contain;
+}
 
+// Padding 
+._pd{
+    padding:0;
+}
+._pd315{
+    padding: 15px;
+}
+
+._pd320{
+    padding: 20px;
+}
 
 
 //footer 
@@ -283,33 +367,143 @@ input[type="text"]:focus, input[type="password"]:focus {
     width: 100%;
     height: 60px;
 }
-._se{
-    @extend ._cn;
-    background-color: $hx-white;
-    border-radius: 3px;
-    margin: 15px;
-    box-shadow:  2px 2px 10px $hx-silver;
-    ._se5ct{
-        font-size: .9em;
-        color: rgba($rgb-black, .9);
-        margin-top: 0px;
-        font-family: $PT-sans;
-    }
-    ._se5cd{
-        font-size: .9em;
-        color: rgba($rgb-black, 1);
-        font-weight: bold;
-        margin-top: 0px;
-        font-family: $PT-sans;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-}
-
-//
-html, 
-body {
+._f5m {
+   height: 100%; 
+   background-color: $_1grey;
+}  
+._f5a{
     height: 100%;
     background-color: $_1grey;
+}
+// Section 
+._se{
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px 15px 15px 15px;
+
+    ._se5t{
+        color: $hx-black;
+
+    }
+    ._se5ct{
+        color: $hx-black;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    ._se5c{
+        color: $hx-black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+    }
+    ._se5i{
+        width: 1em;
+        margin-top: 10px;
+        
+    }
+    ._se5m{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: $text-color;
+        font-weight: normal;
+    }
+}
+._se3a{
+    min-height: 280px;
+    background-color: $hx-white;
+}
+._se3s{
+    background-color: $hx-white;
+    min-height: 190px;
+}
+._se3n{
+    background-color: $_1grey;
+    min-height: 480px;
+}
+
+
+// Icon 
+._ic{
+    color: $text-color;
+    margin-top: 15px;
+}
+._ic5a{
+    color: $hx-green;
+}
+._tb3i{
+
+}
+
+// Desc
+._de3n{
+    margin-top: 0px;
+}
+
+@media (max-width: 992px){
+    //Navbar 
+    ._n{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        visibility: hidden;
+        height: 100%;
+        background-color: $_dblue;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: auto;
+        overflow: auto;
+        z-index: 1;
+        list-style-type: none;
+        box-shadow: 0.5px 0.5px 1px $hx-black;
+        margin-left: -60px;
+        -webkit-transition: all 0.5s linear; /* Safari and Chrome */
+        li{
+            padding: 15px;
+            a{
+                text-decoration: none;
+                color: $hx-white;
+                text-align: center;
+                font-size: 25px;
+                i{
+                    text-align: center;
+                }
+            }
+            &:hover{
+                color: white;
+                background-color: $_blue;
+            }
+        }  
+    }
+    ._n51{
+        height: 70%;
+    }
+    ._n52{
+        height: 30%;
+    } 
+    ._cn5n:hover ul {
+        visibility: visible;
+        margin-left: 0px;
+    }
+    ._se{
+        margin-left: 0px;
+        margin-right: 0px;
+        ._se5t{
+            font-size: .9em;
+        }
+        ._se5ct{
+            font-size: .9em;
+        }
+        ._se5c{
+            font-size: .9em;
+        }
+        ._se5m{
+            font-size: .9em;
+        }
+    }
 }
