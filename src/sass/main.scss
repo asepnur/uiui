@@ -256,15 +256,15 @@ input[type="text"]:focus, input[type="password"]:focus {
                 }
             }
             &:hover{
-                color: white;
+                color: $hx-white;
                 background-color: $_blue;
 
             }
-            &:active{
-                color: white;
-                background-color: $_blue;
-            }
         }  
+        ._n3a{
+            color: $hx-white;
+            background-color: $_blue;
+        }
     }
     ._n51{
         height: 75%;
@@ -316,6 +316,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 ._i3c{
     @extend ._i;
+    width: 25px;
 }
 ._i5h{
     font-size: 2em;
@@ -414,16 +415,13 @@ input[type="text"]:focus, input[type="password"]:focus {
     }
 }
 ._se3a{
-    min-height: 280px;
     background-color: $hx-white;
 }
 ._se3s{
     background-color: $hx-white;
-    min-height: 190px;
 }
 ._se3n{
     background-color: $_1grey;
-    min-height: 480px;
 }
 
 
@@ -475,7 +473,11 @@ input[type="text"]:focus, input[type="password"]:focus {
                 }
             }
             &:hover{
-                color: white;
+                color: $hx-white;
+                background-color: $_blue;
+            }
+            ._n3a{
+                color: $hx-white;
                 background-color: $_blue;
             }
         }  
