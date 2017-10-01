@@ -35,6 +35,35 @@ input[type="text"]:focus, input[type="password"]:focus {
     color: rgba($hx-black,1);
     font-weight: 600;
 }
+
+._he5sm{
+    @extend ._he5md;
+    font-size: .6em;
+}
+._he5i{
+    @extend ._he;
+    color: $hx-black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 50px;
+    font-size: 1.8em;
+}
+._he5co{
+    h4:after{
+        text-align: left;
+        content:" ";
+        width:50px;
+        height:5px;
+        background:$text-color;
+        display:block;
+        margin-top:10px;
+    }
+}
+._he5tb{
+    color: $hx-white;
+    font-size: 1em;
+    font-weight: bold;
+}
 ._he3n{
     @extend ._he;
     margin-top: 50px;
@@ -42,6 +71,8 @@ input[type="text"]:focus, input[type="password"]:focus {
     text-align: center;
     line-height: 112%;
 }
+
+
 ._he3p{
     @extend ._he;
     margin-top: 60px;
@@ -77,6 +108,10 @@ input[type="text"]:focus, input[type="password"]:focus {
     line-height: 24px;
     margin-bottom: 24px;
 }
+._d5ab{
+    @extend ._d;
+    text-align: left;
+}
 // Message Class
 ._me{
     font-size: 11.5px;
@@ -98,6 +133,12 @@ input[type="text"]:focus, input[type="password"]:focus {
     padding-bottom: 30px;
     text-align: center;
 }
+._me5i{
+    @extend ._me;
+    text-align: left;
+    font-size:1em;
+}
+
 ._me3m{
     @extend ._me;
     color: $hx-white;
@@ -112,6 +153,22 @@ input[type="text"]:focus, input[type="password"]:focus {
 ._me3l{
     @extend ._me;
     text-align: left;
+}
+._me3xl{
+    @extend ._me;
+    text-align: left;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+._me3i{
+    @extend ._me3xl;
+    font-weight: bold;
+    color: $text-color;
+}
+._me3sm{
+    font-size: 9px;
 }
 // Block Class
 ._bl{
@@ -133,6 +190,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     background: url('/img/BG.png');
     background-size: cover;
 }
+
 
 // Containter Class
 ._cn5g{
@@ -283,6 +341,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     ._pd5m3nr{
         padding-right: 15px;
     }
+    
     ._he5md{
         font-size: 1.3em;
     }
@@ -305,6 +364,9 @@ input[type="text"]:focus, input[type="password"]:focus {
         }
         ._se5m{
             font-size: .9em;
+        }
+        ._se5xl{
+            font-size: 3em;
         }
     }
 }
@@ -343,6 +405,27 @@ input[type="text"]:focus, input[type="password"]:focus {
     background: $hx-blue;
     object-fit: contain;
 }
+._i3tb3b{
+    @extend ._i3tb;
+    margin: 10px 0px 10px 0px;
+    width: auto;
+    height: auto;
+    max-width: 60px;
+
+}
+._i3s{
+    margin: 10px 0px 10px 0px;
+    border-radius: 5%;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+._i3as{
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    object-fit: cover;
+}
 
 // Padding 
 ._pd{
@@ -354,6 +437,37 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 ._pd320{
     padding: 20px;
+}
+
+// allign
+._al3tc{
+    text-align: center;
+}
+._al3tl{
+    text-align: left;
+}
+._al3tr{
+    text-align: right;
+}
+
+// Margin None
+._mr5n{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+._mr5nb{
+    margin-top: 15px; 
+    margin-bottom: 0px; 
+}
+
+._mr5nt{
+    margin-top: 0px; 
+}
+
+//margin add
+._mr5a{
+    margin-bottom: 15px;
 }
 
 
@@ -399,6 +513,16 @@ input[type="text"]:focus, input[type="password"]:focus {
         text-overflow: ellipsis;
         font-weight: bold;
     }
+    ._se5c3b{
+        @extend ._se5c;
+        color: $text-color;
+        font-weight: bold;
+    }
+    ._se5xl{
+        font-size: 3em;
+        color: $text-color;
+    }
+    
     ._se5i{
         width: 1em;
         margin-top: 10px;
@@ -417,11 +541,17 @@ input[type="text"]:focus, input[type="password"]:focus {
 ._se3a{
     background-color: $hx-white;
 }
+._se3b{
+    background-color: $_2grey;
+}
 ._se3s{
     background-color: $hx-white;
 }
 ._se3n{
     background-color: $_1grey;
+}
+._se3dr{
+    background-color: $hx-gray;
 }
 
 
@@ -507,5 +637,20 @@ input[type="text"]:focus, input[type="password"]:focus {
         ._se5m{
             font-size: .9em;
         }
+        ._se5xl{
+            font-size: 1.5em;
+        }
+    }
+    ._d5ab{
+        font-size: .8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    //padding
+    ._pdx3n{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
