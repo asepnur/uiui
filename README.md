@@ -87,22 +87,56 @@ _bt =       Button
     _he = parent
 
     = text-align and color=
-        Available text align  : Right (default), Center, Left
+        Available text align  : left (default), Center, right
         Available color head : silver (default), main, blue, black
-        _he5 = Heading large normal, right, silver
-        _he5m = Heading large normal, right, main
-        _he5b = Heading large normal, right, blue
-        _he5bk = Heading large normal, right, black
+        Available size : large (default), medium, small
+        _he3 = Heading large normal, left, silver
+        _he3m = Heading large normal, left, main
+        _he3b = Heading large normal, left, blue
+        _he3bk = Heading large normal, left, black
 
-        _he5c = Heading large normal, right, silver
-        _he5cm = Heading large normal, right, main
-        _he5cb = Heading large normal, right, blue
-        _he5cbk = Heading large normal, right, black
+        _he3c = Heading large normal, center, silver
+        _he3cm = Heading large normal, center, main
+        _he3cb = Heading large normal, center, blue
+        _he3cbk = Heading large normal, center, black
 
-        _he5l = Heading large normal, right, silver
-        _he5lm = Heading large normal, right, main
-        _he5lb = Heading large normal, right, blue
-        _he5lbk = Heading large normal, right, black
+        _he3l = Heading large normal, right, silver
+        _he3lm = Heading large normal, right, main
+        _he3lb = Heading large normal, right, blue
+        _he3lbk = Heading large normal, right, black
+
+        = medium =
+        _he33 = Heading medium normal, left, silver
+        _he3m3m = Heading medium normal, left, main
+        _he3m3b = Heading medium normal, left, blue
+        _he3m3bk = Heading medium normal, left, black
+
+        _he3m3c = Heading medium normal, center, silver
+        _he3m3cm = Heading medium normal, center, main
+        _he3m3cb = Heading medium normal, center, blue
+        _he3m3cbk = Heading medium normal, center, black
+
+        _he3m3l = Heading medium normal, right, silver
+        _he3m3lm = Heading medium normal, right, main
+        _he3m3lb = Heading medium normal, right, blue
+        _he3m3lbk = Heading medium normal, right, black
+
+        = SMALL =
+        _he33 = Heading small normal, left, silver
+        _he3x3m = Heading small normal, left, main
+        _he3x3b = Heading small normal, left, blue
+        _he3x3bk = Heading small normal, left, black
+
+        _he3x3c = Heading small normal, center, silver
+        _he3x3cm = Heading small normal, center, main
+        _he3x3cb = Heading small normal, center, blue
+        _he3x3cbk = Heading small normal, center, black
+
+        _he3x3l = Heading small normal, right, silver
+        _he3x3lm = Heading small normal, right, main
+        _he3x3lb = Heading small normal, right, blue
+        _he3x3lbk = Heading small normal, right, black
+
     
     
     = font Weight and size = 
