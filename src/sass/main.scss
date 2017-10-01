@@ -1,5 +1,6 @@
 @import 'variable';
 @import 'grid';
+@import 'button';
 
 input[type="text"], input[type="password"]{
     border-radius: 3px;
@@ -71,9 +72,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     text-align: center;
     line-height: 112%;
 }
-
-
-
 ._he3nb{
     @extend ._he3n;
     font-size: 1.6em;
@@ -254,33 +252,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-bottom-right-radius: 10px;
 }
 
-// Button Class
-._bt{
-    border-radius: 3px;
-    font-family: $helvetica;
-    border: none;
-    padding: 8px 20px;
-    color: $hx-white;
-    width: 100%;
-    font-weight: 100;
-}
-._bt5b{
-    @extend ._bt;
-    background-color:$_blue;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-._bt3p{
-    @extend ._bt;
-    background-color: $text-color;
-}
-._bt3p3m{
-    @extend ._bt;
-    background-color: $text-color;
-    width: 100px;
-    margin-left: 15px;
-    font-size: 1em;
-}
+
 @media (min-width: 992px) {
     ._f5a{
         height: 100%;
@@ -709,6 +681,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     z-index: 1;
     background-color: rgba($rgb-black, .4);
     ._md5cu{
+        box-shadow: 0 4px 8px 0 rgba($rgb-black, .2), 0 6px 20px 0 rgba($rgb-black, 0.19);
         background-color: rgba($rgb-white, 1);
         z-index: 100;
         border-radius: 5px;
@@ -743,6 +716,11 @@ input[type="text"]:focus, input[type="password"]:focus {
             }
         }
     }
+}
+._md5s{
+    @extend ._md;
+    display: none;
+    
 }
 .__x{
     position: absolute;

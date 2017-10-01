@@ -1,0 +1,83 @@
+// Button Class
+@import 'variable';
+._bt{
+    font-family: $helvetica;
+    background-color: $hx-silver; // default
+    font-weight: 100; // default weight
+    font-size: .8em; // default font size
+    color: $hx-white;
+    min-width: 80px;
+    width: 100%; 
+    padding: 3px 0px; // default size
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+._bt3b{ // blue color, small size button
+    @extend ._bt;
+    background-color: $_blue;
+}
+._bt3m{ // main color, small size button
+    @extend ._bt;
+    background-color: $_main;
+}
+._bt3g{ // green color, small size button
+    @extend ._bt;
+    background-color: $hx-green;
+}
+._bt3r{ // red color, small size button
+    @extend ._bt;
+    background-color: $hx-red;
+}
+._bt5m{ // silver color, medium button 
+    @extend ._bt;
+    font-size: 1em;
+    padding: 5px 0px;
+}
+._bt5m3b{ // blue color, medium button 
+    @extend ._bt3b;
+    font-size: 1em;
+    padding: 5px 0px;
+}
+._bt5m3m{ // main color, medium button 
+    @extend ._bt3m;
+    font-size: 1em;
+    padding: 5px 0px;
+}
+._bt5m3g{ // main color, medium button 
+    @extend ._bt3g;
+    font-size: 1em;
+    padding: 5px 0px;
+}
+._bt5m3r{ // main color, medium button 
+    @extend ._bt3r;
+    font-size: 1em;
+    padding: 5px 0px;
+}
+._bt5l{ // silver/default color, large button 
+    @extend ._bt;
+    font-size: 1.3em;
+    padding: 8px 0px;
+}
+._bt5l3b{ // blue color, large button 
+    @extend ._bt3b;
+    font-size: 1.3em;
+    padding: 8px 0px;
+}
+._bt5l3m{ // main color, large button 
+    @extend ._bt3m;
+    font-size: 1.3em;
+    padding: 8px 0px;
+}
+._bt5l3g{ // green color, large button 
+    @extend ._bt3g;
+    font-size: 1.3em;
+    padding: 8px 0px;
+}
+._bt5l3r{ // red color, large button 
+    @extend ._bt3r;
+    font-size: 1.3em;
+    padding: 8px 0px;
+}
