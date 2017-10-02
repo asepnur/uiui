@@ -201,7 +201,7 @@ _bt =       Button
     = SIZE = 
     Available size : small (default)(.9em), xsmall(.8em), medium(1em)
     Availabel color : black (default), silver, main, Blue
-    _ct3 = small, black
+    _ct = small, black
     _ct3s = small silver
     _ct3m = small main 
     _ct3b = small blue
@@ -216,4 +216,56 @@ _bt =       Button
     _ct3mm = medium main 
     _ct3mb = medium blue
 
+== ICON ==
+    available size : small(default)(1em),xsmall(.8em), medium(1.875em), large(3.125em)
+    availabe color : black(default), silver, main, blue, red
+    _ic = parent icon, small black
+    _ic3s = small silver
+    _ic3m = small main
+    _ic3b = small blue
+    _ic3r = small red
 
+    _ic3x = xsmall black
+    _ic3xs = xsmall silver
+    _ic3xm = xsmall main
+    _ic3xb = xsmall blue
+    _ic3xr = xsmall red
+
+    _ic3m = medium black
+    _ic3ms = meidum silver
+    _ic3mm = medium main
+    _ic3mb = medium blue
+    _ic3mr = medium red
+    
+    _ic3l = large black
+    _ic3ls = large silver
+    _ic3lm = large main
+    _ic3lb = large blue
+    _ic3lr = large red
+== Image ==
+    Available size(width) : small(15px)(default), xsmall(20px), medium(25px), large(30px),full(100%)
+    Available position: left(default), center, right
+    Available border-radius : sharp(0)(default), soft(5px), circle(50%)
+
+    _i3so = soft
+    _i3ci = circle
+
+    _i = small, left, sharp
+    _i3c =  small, center, sharp
+    _i3r =  small, right, sharp
+    
+    _i3x = xsmall, left, sharp
+    _i3xc =  xsmall, center, sharp
+    _i3xr =  xsmall, right, sharp
+    
+    _i3m = medium, left, sharp
+    _i3mc =  medium, center, sharp
+    _i3mr =  medium, right, sharp
+    
+    _i3l = large, left, sharp
+    _i3lc =  large, center, sharp
+    _i3lr =  large, right, sharp
+    
+    _i3f = full, left, sharp
+    _i3fc =  full, center, sharp
+    _i3fr =  full, right, sharp
