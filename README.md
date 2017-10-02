@@ -152,3 +152,68 @@ _bt =       Button
     = bold and italic =
         _bo = bold
         _it = italic
+
+== Padding and Margin ==
+    Available padding : little(5px) default, medium(10px), large(15px), xlarge(30px), none
+    Available padding position : top, right, bottom, left, top & bottom, left & right, all
+    _pd = padding parent
+    _pd3t = padding little top
+    _pd3r = padding little right
+    _pd3b = padding little bottom
+    _pd3l = padding little left
+    _pd3tb = padding little top and bottom
+    _pd3lr = padding little left and right
+    _pd3a = padding little all
+    
+    _pd3m3t = padding medium top
+    _pd3m3r = padding medium right
+    _pd3m3b = padding medium bottom
+    _pd3m3l = padding medium left
+    _pd3m3tb = padding medium top and bottom
+    _pd3m3lr = padding medium left and right
+    _pd3m3a = padding medium all
+
+    _pd3l3t = padding large top
+    _pd3l3r = padding large right
+    _pd3l3b = padding large bottom
+    _pd3l3l = padding large left
+    _pd3l3tb = padding large top and bottom
+    _pd3l3lr = padding large left and right
+    _pd3l3a = padding large all
+
+    _pd3xl3t = padding xlarge top
+    _pd3xl3r = padding xlarge right
+    _pd3xl3b = padding xlarge bottom
+    _pd3xl3l = padding xlarge left
+    _pd3xl3tb = padding xlarge top and bottom
+    _pd3xl3lr = padding xlarge left and right
+    _pd3xl3a = padding xlarge all
+
+    _pd3n3t = padding none top
+    _pd3n3r = padding none right
+    _pd3n3b = padding none bottom
+    _pd3n3l = padding none left
+    _pd3n3tb = padding none  top and bottom
+    _pd3n3lr = padding none  left and right
+    _pd3n3a = padding none all
+== content text for description or Message ==
+    _ct = parent
+    = SIZE = 
+    Available size : small (default)(.9em), xsmall(.8em), medium(1em)
+    Availabel color : black (default), silver, main, Blue
+    _ct3 = small, black
+    _ct3s = small silver
+    _ct3m = small main 
+    _ct3b = small blue
+
+    _ct3x = xsmall, black
+    _ct3xs = xsmall silver
+    _ct3xm = xsmall main 
+    _ct3xb = xsmall blue
+
+    _ct3m = medium, black
+    _ct3ms = medium silver
+    _ct3mm = medium main 
+    _ct3mb = medium blue
+
+

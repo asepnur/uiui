@@ -1,0 +1,321 @@
+// Typography style 
+._bo{ // bold font-weight
+    font-weight: bold;
+}
+._it{ // italic style
+    font-style: italic;
+}
+._pd{ // padding default
+    padding : 0;
+}
+._pd3t{ // padding little (default) top
+    padding-top : 5px;
+}
+._pd3r{ // padding little default right
+    padding-right : 5px;
+}
+._pd3b{ // padding little default bottom
+    padding-bottom : 5px;
+}
+._pd3l{ // padding little default left
+    padding-left : 5px;
+}
+._pd3tb{ // padding little default top & bottom
+    padding-top : 5px;
+    padding-right : 5px;
+}
+._pd3lr{ // padding little default left & right
+    padding-left : 5px;
+    padding-right : 5px;
+}
+._pd3a{ // padding little default all
+    padding: 5px;
+}
+
+// Medium
+._pd3m3t{ // padding medium  top
+    padding-top : 10px;
+}
+._pd3m3r{ // padding medium default right
+    padding-right : 10px;
+}
+._pd3m3b{ // padding medium default bottom
+    padding-bottom : 10px;
+}
+._pd3m3l{ // padding medium default left
+    padding-left : 10px;
+}
+._pd3m3tb{ // padding medium default top & bottom
+    padding-top : 10px;
+    padding-right : 10px;
+}
+._pd3m3lr{ // padding medium default left & right
+    padding-left : 10px;
+    padding-right : 10px;
+}
+._pd3m3a{ // padding medium default all
+    padding: 10px;
+}
+
+// large
+._pd3l3t{ // padding large  top
+    padding-top : 15px;
+}
+._pd3l3r{ // padding large default right
+    padding-right : 15px;
+}
+._pd3l3b{ // padding large default bottom
+    padding-bottom : 15px;
+}
+._pd3l3l{ // padding large default left
+    padding-left : 15px;
+}
+._pd3l3tb{ // padding large default top & bottom
+    padding-top : 15px;
+    padding-right : 15px;
+}
+._pd3l3lr{ // padding large default left & right
+    padding-left : 15px;
+    padding-right : 15px;
+}
+._pd3l3a{ // padding large default all
+    padding: 15px;
+}
+
+// extra large
+._pd3xl3t{ // padding extra large  top
+    padding-top : 30px;
+}
+._pd3xl3r{ // padding extra large default right
+    padding-right : 30px;
+}
+._pd3xl3b{ // padding extra large default bottom
+    padding-bottom : 30px;
+}
+._pd3xl3l{ // padding extra large default left
+    padding-left : 30px;
+}
+._pd3xl3tb{ // padding extra large default top & bottom
+    padding-top : 30px;
+    padding-right : 30px;
+}
+._pd3xl3lr{ // padding extra large default left & right
+    padding-left : 30px;
+    padding-right : 30px;
+}
+._pd3xl3a{ // padding extra large default all
+    padding: 30px;
+}
+
+// none
+._pd3n3t{ // padding extra large  top
+    padding-top : 0px;
+}
+._pd3n3r{ // padding extra large default right
+    padding-right : 0px;
+}
+._pd3n3b{ // padding extra large default bottom
+    padding-bottom : 0px;
+}
+._pd3n3l{ // padding extra large default left
+    padding-left : 0px;
+}
+._pd3n3tb{ // padding extra large default top & bottom
+    padding-top : 0px;
+    padding-right : 0px;
+}
+._pd3n3lr{ // padding extra large default left & right
+    padding-left : 0px;
+    padding-right : 0px;
+}
+._pd3n3a{ // padding extra large default all
+    padding: 0px;
+}
+
+// Margin
+._ma{ // margin default
+    margin : 0;
+}
+._ma3t{ // margin little (default) top
+    margin-top : 5px;
+}
+._ma3r{ // margin little default right
+    margin-right : 5px;
+}
+._ma3b{ // margin little default bottom
+    margin-bottom : 5px;
+}
+._ma3l{ // margin little default left
+    margin-left : 5px;
+}
+._ma3tb{ // margin little default top & bottom
+    margin-top : 5px;
+    margin-right : 5px;
+}
+._ma3lr{ // margin little default left & right
+    margin-left : 5px;
+    margin-right : 5px;
+}
+._ma3a{ // margin little default all
+    margin: 5px;
+}
+
+// Medium
+._ma3m3t{ // margin medium  top
+    margin-top : 10px;
+}
+._ma3m3r{ // margin medium default right
+    margin-right : 10px;
+}
+._ma3m3b{ // margin medium default bottom
+    margin-bottom : 10px;
+}
+._ma3m3l{ // margin medium default left
+    margin-left : 10px;
+}
+._ma3m3tb{ // margin medium default top & bottom
+    margin-top : 10px;
+    margin-right : 10px;
+}
+._ma3m3lr{ // margin medium default left & right
+    margin-left : 10px;
+    margin-right : 10px;
+}
+._ma3m3a{ // margin medium default all
+    margin: 10px;
+}
+
+// large
+._ma3l3t{ // margin large  top
+    margin-top : 15px;
+}
+._ma3l3r{ // margin large default right
+    margin-right : 15px;
+}
+._ma3l3b{ // margin large default bottom
+    margin-bottom : 15px;
+}
+._ma3l3l{ // margin large default left
+    margin-left : 15px;
+}
+._ma3l3tb{ // margin large default top & bottom
+    margin-top : 15px;
+    margin-right : 15px;
+}
+._ma3l3lr{ // margin large default left & right
+    margin-left : 15px;
+    margin-right : 15px;
+}
+._ma3l3a{ // margin large default all
+    margin: 15px;
+}
+
+// extra large
+._ma3xl3t{ // margin extra large  top
+    margin-top : 30px;
+}
+._ma3xl3r{ // margin extra large default right
+    margin-right : 30px;
+}
+._ma3xl3b{ // margin extra large default bottom
+    margin-bottom : 30px;
+}
+._ma3xl3l{ // margin extra large default left
+    margin-left : 30px;
+}
+._ma3xl3tb{ //  margin large default top & bottom
+    margin-top : 30px;
+    margin-right : 30px;
+}
+._ma3xl3lr{ // margin largge default left & right
+    margin-left : 30px;
+    margin-right : 30px;
+}
+._ma3xl3a{ // margin extra large default all
+    margin: 30px;
+}
+
+// none
+._ma3n3t{ // margin extra large  top
+    margin-top : 0px;
+}
+._ma3n3r{ // margin extra large default right
+    margin-right : 0px;
+}
+._ma3n3b{ // margin extra large default bottom
+    margin-bottom : 0px;
+}
+._ma3n3l{ // margin extra large default left
+    margin-left : 0px;
+}
+._ma3n3tb{ // margin large default top & bottom
+    margin-top : 0px;
+    margin-right : 0px;
+}
+._ma3n3lr{ // margin large default left & right
+    margin-left : 0px;
+    margin-right : 0px;
+}
+._ma3n3a{ // margin extra large default all
+    margin: 0px;
+}
+
+// Content text 
+._ct { // Default ( small black)
+    font-family: $PT-sans;
+    font-size: .9em;
+    color: $hx-black;
+    padding:0;
+    margin:0;
+}
+._ct3s{ // small silver
+    @extend ._ct;
+    color: $hx-silver;
+}
+._ct3m{ // small main
+    @extend ._ct;
+    color: $_main;
+}
+._ct3b{ // small blue
+    @extend ._ct;
+    color: $_blue;
+}
+._ct3x { // xsmall black
+    @extend ._ct;
+    font-size: .8em;
+}
+._ct3xs{ // xsmall silver
+    @extend ._ct;
+    color: $hx-silver;
+    font-size: .8em;
+}
+._ct3xm{ // xsmall main
+    @extend ._ct;
+    color: $_main;
+    font-size: .8em;
+}
+._ct3xb{ // xsmall blue
+    @extend ._ct;
+    color: $_blue;
+    font-size: .8em;
+}
+
+._ct3m { // medium black
+    @extend ._ct;
+    font-size: 1em;
+}
+._ct3ms{ // medium silver
+    @extend ._ct;
+    color: $hx-silver;
+    font-size: 1em;
+}
+._ct3mm{ // medium main
+    @extend ._ct;
+    color: $_main;
+    font-size: 1em;
+}
+._ct3mb{ // medium blue
+    @extend ._ct;
+    color: $_blue;
+    font-size: 1em;
+}
