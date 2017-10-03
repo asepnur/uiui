@@ -1,13 +1,17 @@
 @import 'variable';
 @import 'grid';
+@import 'button';
+@import 'header';
+@import 'typography';
+@import 'table';
 input[type="text"],
 input[type="password"] {
     border-radius: 3px;
     border: .5px solid rgba($rgb-silver, .5);
     outline: none;
-    padding: 12px 16px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     font-size: 1em;
     font-weight: normal;
@@ -16,6 +20,12 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
     border: .5px solid rgba($rgb-silver, 1);
+}
+
+textarea {
+    @extend input[type="text"];
+    resize: vertical;
+    overflow: auto;
 }
 
 ._cn input[type="password"] {
@@ -440,6 +450,10 @@ input[type="password"]:focus {
     ._tb3g5p {
         width: 100%;
     }
+    ._ta5l {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 // Image
@@ -583,6 +597,9 @@ input[type="password"]:focus {
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px 15px 15px 15px;
+    ._ro:last-child {
+        padding-bottom: 35px;
+    }
     ._se5t {
         color: $hx-black;
     }
@@ -619,6 +636,7 @@ input[type="password"]:focus {
         text-align: center;
         color: $text-color;
         font-weight: normal;
+        cursor: pointer;
     }
 }
 
@@ -769,7 +787,7 @@ input[type="password"]:focus {
     }
 }
 
-// Modal
+// Modal 
 ._md {
     padding: 30px;
     display: none;
@@ -829,6 +847,36 @@ input[type="password"]:focus {
 .__wr {
     cursor: pointer;
     &:hover {
+        font-weight: bold;
+    }
+}
+
+._ta {
+    ._ta5l {
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: inline;
+            border-left: 1.5px solid $hx-silver;
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+            &:first-child {
+                border-left: none;
+                padding-left: 0px;
+            }
+            &:hover {
+                color: $_blue !important;
+                font-weight: bold;
+            }
+            a {
+                @extend ._ct;
+                color: $hx-silver;
+            }
+        }
+    }
+    ._ta5l3a {
+        color: $_blue !important;
         font-weight: bold;
     }
 }
