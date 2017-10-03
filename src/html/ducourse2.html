@@ -3,49 +3,6 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script>
-      $(document).ready(function(){
-          $("#attend").hide();
-          $("#downld").hide();
-          $("#assist").hide();
-          $("#grade").hide();
-          $("#btn_assign").click(function(){
-              $("#assign").show(200);
-              $("#attend").hide(200);
-              $("#downld").hide(200);
-              $("#assist").hide(200);
-              $("#grade").hide(200);
-          });
-          $("#btn_attend").click(function(){
-              $("#assign").hide(200);
-              $("#attend").show(200);
-              $("#downld").hide(200);
-              $("#assist").hide(200);
-              $("#grade").hide(200);
-          });
-          $("#btn_downld").click(function(){
-              $("#assign").hide(200);
-              $("#attend").hide(200);
-              $("#downld").show(200);
-              $("#assist").hide(200);
-              $("#grade").hide(200);
-          });
-          $("#btn_assist").click(function(){
-              $("#assign").hide(200);
-              $("#attend").hide(200);
-              $("#downld").hide(200);
-              $("#assist").show(200);
-              $("#grade").hide(200);
-          });
-          $("#btn_grade").click(function(){
-              $("#assign").hide(200);
-              $("#attend").hide(200);
-              $("#downld").hide(200);
-              $("#assist").hide(200);
-              $("#grade").show(200);
-          });
-      });
-      </script>
       <!-- inject:css -->
       <!-- endinject -->
     </head>
@@ -116,10 +73,10 @@
             </div>
             <div class="_c5x312 _c5m312">
                 <div class="_c5x312 _c5m312 _pd5n">
-                    <p class="_mr5nb _mr5nt"><a class="_me3i " id="btn_assign">Assignment</a>  |   <a class="_me3xl _mr5n" id="btn_attend">Attendance</a>   |   <a class="_me3xl _mr5n" id="btn_downld">Download</a>   |   <a class="_me3xl _mr5n" id="btn_assist">Assistant</a>    |   <a class="_me3xl _mr5n" id="btn_grade">Grade</a></p>
+                    <p class="_mr5nb _mr5nt"><a class="_me3i" id="btn_assign">Assignment</a>  |   <a class="_me3xl _mr5n" id="btn_attend">Attendance</a>   |   <a class="_me3xl _mr5n" id="btn_downld">Download</a>   |   <a class="_me3xl _mr5n" id="btn_assist">Assistant</a>    |   <a class="_me3xl _mr5n" id="btn_grade">Grade</a></p>
                 </div>
             </div>
-            <div class="_c5x312 _c5m312 _pd5n" id="assign">
+            <div class="_c5x312 _c5m312 _pd5n __ass">
               <div class="_se _se3a">
                 <div class="_ro">
                   <div class="_c5x312">
@@ -180,7 +137,7 @@
                     </div>
                 </div>
             </div>
-            <div class="_c5x312 _c5m312 _pd5n" id="attend">
+            <div class="_c5x312 _c5m312 _pd5n __att">
               <div class="_se _se3a">
                 <div class="_ro">
                   <div class="_c5x33 _c5m33 _al3tc">
@@ -202,7 +159,7 @@
                 </div>
               </div>
             </div>
-            <div class="_c5x312 _c5m312 _pd5n" id="downld">
+            <div class="_c5x312 _c5m312 _pd5n __dow">
                 <div class="_c5x33 _c5m33 _pd5n _pdx3n">
                     <div class="_se _se3a">
                         <div class="_ro">
@@ -259,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="_c5x312 _c5m312 _pd5n" id="assist">
+            <div class="_c5x312 _c5m312 _pd5n __ast">
                 <div class="_c5x312 _c5m36 _pd5n _pdx3n">
                     <div class="_c5x36 _c5m36 _pd5n">
                         <div class="_se _se3a">
@@ -352,43 +309,29 @@
                     </div>
                 </div>
             </div>
-            <div class="_c5x312 _c5m312 _pd5n" id="grade">
-              <div class="_se _se3dr">
+            <div class="_c5x312 _c5m312 _pd5n __grd">
+              <div class="_se">
                 <div class="_ro">
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <p class="_he5tb">Tugas</p>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <p class="_he5tb">QUIS</p>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <p class="_he5tb" >UTS</p>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <p class="_he5tb">UAS</p>
-                  </div>
-                  <div class="_c5x34 _c5m34 _al3tc">
-                    <p class="_he5tb">Final Score</p>
-                  </div>
-                </div>
-              </div>
-              <div class="_se _se3a">
-                <div class="_ro">
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <h3 class="_mr5a _se5xl">90</hh3>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <h3 class="_mr5a _se5xl">75</h3>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <h3 class="_mr5a _se5xl">85</h3>
-                  </div>
-                  <div class="_c5x32 _c5m32 _al3tc">
-                    <h3 class=" _mr5a _se5xl">70</h3>
-                  </div>
-                  <div class="_c5x34 _c5m34 _al3tc">
-                    <h3 class=" _mr5a _se5xl">80</h3>
-                  </div>
+                  <table class="_tb3g5p">
+                    <tr>
+                      <th>No</th>
+                      <th>Mata Kuliah</th> 
+                      <th>Tugas</th>
+                      <th>QUIS</th>
+                      <th>UTS</th>
+                      <th>UAS</th> 
+                      <th>Final Score</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>ALgoritma Pemrograman</td>
+                      <td>90</td>
+                      <td>75</td>
+                      <td>85</td>
+                      <td>70</td>
+                      <td>80</td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
@@ -446,5 +389,7 @@
     </div>
         <!-- _bl -->
       </div>
+    <!-- inject:js -->
+    <!-- endinject -->
     </body>
   </html>

@@ -1,10 +1,9 @@
 @import 'variable';
 @import 'grid';
-@import 'button';
-
-input[type="text"], input[type="password"]{
+input[type="text"],
+input[type="password"] {
     border-radius: 3px;
-    border: .5px solid rgba($rgb-silver,.5);
+    border: .5px solid rgba($rgb-silver, .5);
     outline: none;
     padding: 12px 16px;
     margin-top: 12px;
@@ -13,35 +12,39 @@ input[type="text"], input[type="password"]{
     font-size: 1em;
     font-weight: normal;
 }
-input[type="text"]:focus, input[type="password"]:focus {
-    border: .5px solid rgba($rgb-silver,1);
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: .5px solid rgba($rgb-silver, 1);
 }
 
-._cn input[type="password"]{
+._cn input[type="password"] {
     margin-bottom: 24px;
     padding-right: 36px;
 }
 
 // Header Class 
-._he{
+._he {
     font-size: 2.2em;
     color: $text-color;
     margin: 0;
 }
-._he5md{
+
+._he5md {
     margin-left: 15px;
     margin-top: 25px;
     margin-bottom: 20px;
     font-size: .9em;
-    color: rgba($hx-black,1);
+    color: rgba($hx-black, 1);
     font-weight: 600;
 }
 
-._he5sm{
+._he5sm {
     @extend ._he5md;
     font-size: .6em;
 }
-._he5i{
+
+._he5i {
     @extend ._he;
     color: $hx-black;
     text-align: center;
@@ -49,130 +52,149 @@ input[type="text"]:focus, input[type="password"]:focus {
     margin-top: 50px;
     font-size: 1.8em;
 }
-._he5co{
-    h4:after{
+
+._he5co {
+    h4:after {
         text-align: left;
-        content:" ";
-        width:50px;
-        height:5px;
-        background:$text-color;
-        display:block;
-        margin-top:10px;
+        content: " ";
+        width: 50px;
+        height: 5px;
+        background: $text-color;
+        display: block;
+        margin-top: 10px;
     }
 }
-._he5tb{
+
+._he5tb {
     color: $hx-white;
     font-size: 1em;
     font-weight: bold;
 }
-._he3n{
+
+._he3n {
     @extend ._he;
     margin-top: 50px;
     margin-bottom: 5px;
     text-align: center;
     line-height: 112%;
 }
-._he3nb{
+
+._he3nb {
     @extend ._he3n;
     font-size: 1.6em;
     color: $_blue;
 }
-._he3p{
+
+._he3p {
     @extend ._he;
     margin-top: 60px;
     margin-bottom: 10px;
 }
-._he3m{
+
+._he3m {
     @extend ._he;
     color: $hx-white;
     margin-top: 50px;
     font-weight: 100;
     font-family: $PT-sans;
 }
-._he3cm{
+
+._he3cm {
     margin-top: 0;
     padding: 12px;
     color: $text-color;
     font-size: 2em;
 }
+
 // Description class
-._d{
+._d {
     font-size: 1em;
     color: $hx-black;
 }
-._d3c3m{
+
+._d3c3m {
     color: rgba($rgb-black, .5);
     text-align: left;
     padding: 12px;
 }
 
-._d5m{
+._d5m {
     @extend ._d;
     text-align: center;
     line-height: 24px;
     margin-bottom: 24px;
 }
-._d5ab{
+
+._d5ab {
     @extend ._d;
     text-align: left;
 }
+
 // Typography
-._bd{
+._bd {
     font-weight: bold;
 }
+
 // Message Class
-._me{
+._me {
     font-size: 11.5px;
     color: rgba($rgb-black, .5);
 }
 
-._me3c{
+._me3c {
     font-size: 11.5px;
     text-align: center;
-    color: rgba($rgb-silver,1);
+    color: rgba($rgb-silver, 1);
 }
-._me3b{
+
+._me3b {
     @extend ._me;
     color: $_blue;
 }
-._me5ts{
+
+._me5ts {
     color: $text-color;
     font-size: .8em;
     margin-top: 25px;
     text-align: right;
 }
-._me5t{
+
+._me5t {
     @extend ._me;
     margin: 5px;
 }
-._me5f{
+
+._me5f {
     @extend ._me;
     padding-top: 15px;
     padding-bottom: 30px;
     text-align: center;
 }
-._me5i{
+
+._me5i {
     @extend ._me;
     text-align: left;
-    font-size:1em;
+    font-size: 1em;
 }
 
-._me3m{
+._me3m {
     @extend ._me;
     color: $hx-white;
     font-family: $PT-sans;
     font-weight: 100;
 }
 
-._me3v{
+._me3v {
     @extend ._me;
     text-align: center;
 }
-._me3l{
+
+._me3l {
     @extend ._me;
     text-align: left;
 }
-._me3xl{
+
+._me3xl {
     @extend ._me;
     text-align: left;
     font-size: 1em;
@@ -180,28 +202,24 @@ input[type="text"]:focus, input[type="password"]:focus {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-._me3i{
+
+._me3i {
     @extend ._me3xl;
-    font-weight: bold;
-    color: $text-color;
+    font-weight: normal;
+    color: $hx_black;
 }
-._me3sm{
+
+._me3sm {
     font-size: 9px;
 }
+
 // Block Class
-._bl{
+._bl {
     padding: 0;
     height: 100%;
 }
 
-._bl5b{
-    width: 100%;
-    height: 200px;
-    //background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    background: url('/img/BG.png');
-    background-size: cover;
-}
-._bl5c{
+._bl5b {
     width: 100%;
     height: 200px;
     //background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -209,11 +227,18 @@ input[type="text"]:focus, input[type="password"]:focus {
     background-size: cover;
 }
 
+._bl5c {
+    width: 100%;
+    height: 200px;
+    //background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    background: url('/img/BG.png');
+    background-size: cover;
+}
 
 // Containter Class
-._cn5g{
+._cn5g {
     position: relative;
-    i[class="fa fa-eye"]{
+    i[class="fa fa-eye"] {
         position: absolute;
         top: 35%;
         right: 15px;
@@ -222,20 +247,25 @@ input[type="text"]:focus, input[type="password"]:focus {
         cursor: pointer;
     }
 }
-._cn3l{
+
+._cn3l {
     @extend ._cn;
 }
-._cn3r{
+
+._cn3r {
     @extend ._cn;
 }
-._cn5n{
+
+._cn5n {
     display: inline-block;
 }
-._g{
+
+._g {
     margin: -15px;
-    margin-top:20px;
+    margin-top: 20px;
 }
-._g3l5m{
+
+._g3l5m {
     @extend ._g;
     background: $_blue;
     height: 200px;
@@ -243,7 +273,8 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-._g3r5m{
+
+._g3r5m {
     @extend ._g;
     background: $_1grey;
     height: 200px;
@@ -252,21 +283,51 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-bottom-right-radius: 10px;
 }
 
+// Button Class
+._bt {
+    border-radius: 3px;
+    font-family: $helvetica;
+    border: none;
+    padding: 8px 20px;
+    color: $hx-white;
+    width: 100%;
+    font-weight: 100;
+}
+
+._bt5b {
+    @extend ._bt;
+    background-color: $_blue;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+._bt3p {
+    @extend ._bt;
+    background-color: $text-color;
+}
+
+._bt3p3m {
+    @extend ._bt;
+    background-color: $text-color;
+    width: 100px;
+    margin-left: 15px;
+    font-size: 1em;
+}
 
 @media (min-width: 992px) {
-    ._f5a{
+    ._f5a {
         height: 100%;
         background: url('/img/BG.png');
         background-size: cover;
     }
-    ._f5a{
-        ._bl{
+    ._f5a {
+        ._bl {
             height: auto;
             margin-top: 180px;
             background-color: rgba($rgb-white, 1);
             border-radius: 10px;
         }
-        ._bl5b{
+        ._bl5b {
             position: absolute;
             width: 33.33333333%;
             height: 100%;
@@ -276,14 +337,14 @@ input[type="text"]:focus, input[type="password"]:focus {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
-        ._bl5c{
+        ._bl5c {
             width: 0;
             height: 0;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
     }
-    ._n{
+    ._n {
         margin: 0;
         padding: 0;
         display: inline-block;
@@ -299,120 +360,124 @@ input[type="text"]:focus, input[type="password"]:focus {
         list-style-type: none;
         box-shadow: 0.5px 0.5px 1px $hx-black;
         margin-left: 0;
-        -webkit-transition: all 0.5s linear; /* Safari and Chrome */
-        li{
+        -webkit-transition: all 0.5s linear;
+        /* Safari and Chrome */
+        li {
             padding: 15px;
-            a{
+            a {
                 text-decoration: none;
                 color: $hx-white;
                 font-size: 30px;
                 text-align: center;
-                i{
+                i {
                     text-align: center;
                 }
             }
-            &:hover{
+            &:hover {
                 color: $hx-white;
                 background-color: $_blue;
-
             }
-        }  
-        ._n3a{
+        }
+        ._n3a {
             color: $hx-white;
             background-color: $_blue;
         }
     }
-    ._n51{
+    ._n51 {
         height: 75%;
     }
-    ._n52{
+    ._n52 {
         height: 25%;
-    } 
+    }
     // Padding none
-    ._pd5n{
+    ._pd5n {
         padding-left: 0;
         padding-right: 0;
     }
-    ._pd5m3n{
+    ._pd5m3n {
         padding-left: 100px;
     }
-    ._pd5m3nr{
+    ._pd5m3nr {
         padding-right: 15px;
     }
-    
-    ._he5md{
+    ._he5md {
         font-size: 1.3em;
     }
-    ._me5ts{
+    ._me5ts {
         font-size: 1em;
     }
     // Section Web
-    ._se{
-        ._se5t{
+    ._se {
+        ._se5t {
             font-size: 1.1em;
         }
-        ._se5ct{
+        ._se5ct {
             font-size: 1em;
         }
-        ._se5c{
+        ._se5c {
             font-size: 1em;
         }
-        ._se5i{
+        ._se5i {
             width: 1em;
         }
-        ._se5m{
+        ._se5m {
             font-size: .9em;
         }
-        ._se5xl{
+        ._se5xl {
             font-size: 3em;
         }
     }
-    ._md5cu{
-        padding : 0 50px 50px 50px;
-        input[type="text"]{
-            
-        }
-        ._md5i{
+    ._md5cu {
+        padding: 0 50px 50px 50px;
+        input[type="text"] {}
+        ._md5i {
             padding-top: 50px;
             padding-bottom: 50px;
             margin-top: 30px;
             margin-bottom: 30px;
         }
     }
+    ._tb3g5p {
+        width: 100%;
+    }
 }
 
 // Image
-._i{
+._i {
     margin: 0;
     padding: 0;
 }
-._i3c{
+
+._i3c {
     @extend ._i;
     width: 25px;
 }
-._i3ce{
+
+._i3ce {
     width: 50px;
     display: block;
     margin: auto;
 }
-._i5h{
+
+._i5h {
     font-size: 2em;
     margin-left: 0px;
     margin-top: 20px;
     display: inline-block;
-
 }
-._i5m{
+
+._i5m {
     @extend ._i;
     margin-top: 76px;
     width: 157px;
 }
 
-._i5c3m{
+._i5c3m {
     @extend ._i;
     margin-top: 76px;
 }
-._i3tb{
+
+._i3tb {
     margin: 0;
     border-radius: 50%;
     width: 30px;
@@ -420,22 +485,24 @@ input[type="text"]:focus, input[type="password"]:focus {
     background: $hx-blue;
     object-fit: contain;
 }
-._i3tb3b{
+
+._i3tb3b {
     @extend ._i3tb;
     margin: 10px 0px 10px 0px;
     width: auto;
     height: auto;
     max-width: 60px;
-
 }
-._i3s{
+
+._i3s {
     margin: 10px 0px 10px 0px;
     border-radius: 5%;
     width: 100%;
     height: auto;
     max-width: 150px;
 }
-._i3as{
+
+._i3as {
     width: 100%;
     height: auto;
     max-height: 50px;
@@ -443,51 +510,53 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 // Padding 
-._pd{
-    padding:0;
+._pd {
+    padding: 0;
 }
-._pd315{
+
+._pd315 {
     padding: 15px;
 }
 
-._pd320{
+._pd320 {
     padding: 20px;
 }
 
 // allign
-._al3tc{
+._al3tc {
     text-align: center;
 }
-._al3tl{
+
+._al3tl {
     text-align: left;
 }
-._al3tr{
+
+._al3tr {
     text-align: right;
 }
 
 // Margin None
-._mr5n{
+._mr5n {
     margin-left: 0px;
     margin-right: 0px;
 }
 
-._mr5nb{
-    margin-top: 15px; 
-    margin-bottom: 0px; 
+._mr5nb {
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
-._mr5nt{
-    margin-top: 0px; 
+._mr5nt {
+    margin-top: 0px;
 }
 
 //margin add
-._mr5a{
+._mr5a {
     margin-bottom: 15px;
 }
 
-
 //footer 
-._f{
+._f {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -497,53 +566,52 @@ input[type="text"]:focus, input[type="password"]:focus {
     width: 100%;
     height: 60px;
 }
+
 ._f5m {
-   height: 100%; 
-   background-color: $_1grey;
-}  
-._f5a{
     height: 100%;
     background-color: $_1grey;
 }
+
+._f5a {
+    height: 100%;
+    background-color: $_1grey;
+}
+
 // Section 
-._se{
+._se {
     position: relative;
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px 15px 15px 15px;
-
-    ._se5t{
+    ._se5t {
         color: $hx-black;
-
     }
-    ._se5ct{
+    ._se5ct {
         color: $hx-black;
         overflow: hidden;
         white-space: nowrap;
     }
-    ._se5c{
+    ._se5c {
         color: $hx-black;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight: bold;
     }
-    ._se5c3b{
+    ._se5c3b {
         @extend ._se5c;
         color: $text-color;
         font-weight: bold;
     }
-    ._se5xl{
+    ._se5xl {
         font-size: 3em;
         color: $text-color;
     }
-    
-    ._se5i{
+    ._se5i {
         width: 1em;
         margin-top: 10px;
-        
     }
-    ._se5m{
+    ._se5m {
         position: absolute;
         left: 0;
         right: 0;
@@ -553,43 +621,63 @@ input[type="text"]:focus, input[type="password"]:focus {
         font-weight: normal;
     }
 }
-._se3a{
+
+._se3a {
     background-color: $hx-white;
 }
-._se3b{
+
+._se3b {
     background-color: $_2grey;
 }
-._se3s{
+
+._se3s {
     background-color: $hx-white;
 }
-._se3n{
+
+._se3n {
     background-color: $_1grey;
 }
-._se3dr{
+
+._se3dr {
     background-color: $hx-gray;
 }
 
-
 // Icon 
-._ic{
+._ic {
     color: $text-color;
     margin-top: 15px;
 }
-._ic5a{
-    color: $hx-green;
-}
-._tb3i{
 
+._ic5a {
+    color: $hx-green;
 }
 
 // Desc
-._de3n{
+._de3n {
     margin-top: 0px;
 }
 
-@media (max-width: 992px){
+._tb3g5p {
+    border-collapse: separate;
+    border-radius: 5px;
+    background-color: $_3grey;
+    text-align: left;
+    width: 100%;
+    th {
+        color: $hx-white;
+        padding: 15px;
+        font-size: 1em;
+    }
+    td {
+        background-color: $hx-white;
+        padding: 15px;
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 992px) {
     //Navbar 
-    ._n{
+    ._n {
         margin: 0;
         padding: 0;
         display: inline-block;
@@ -605,73 +693,85 @@ input[type="text"]:focus, input[type="password"]:focus {
         list-style-type: none;
         box-shadow: 0.5px 0.5px 1px $hx-black;
         margin-left: -60px;
-        -webkit-transition: all 0.5s linear; /* Safari and Chrome */
-        li{
+        -webkit-transition: all 0.5s linear;
+        /* Safari and Chrome */
+        li {
             padding: 15px;
-            a{
+            a {
                 text-decoration: none;
                 color: $hx-white;
                 text-align: center;
                 font-size: 25px;
-                i{
+                i {
                     text-align: center;
                 }
             }
-            &:hover{
+            &:hover {
                 color: $hx-white;
                 background-color: $_blue;
             }
-            ._n3a{
+            ._n3a {
                 color: $hx-white;
                 background-color: $_blue;
             }
-        }  
+        }
     }
-    ._n51{
+    ._n51 {
         height: 70%;
     }
-    ._n52{
+    ._n52 {
         height: 30%;
-    } 
+    }
     ._cn5n:hover ul {
         visibility: visible;
         margin-left: 0px;
     }
-    ._se{
+    ._se {
         margin-left: 0px;
         margin-right: 0px;
-        ._se5t{
+        ._se5t {
             font-size: .9em;
         }
-        ._se5ct{
+        ._se5ct {
             font-size: .9em;
         }
-        ._se5c{
+        ._se5c {
             font-size: .9em;
         }
-        ._se5m{
+        ._se5m {
             font-size: .9em;
         }
-        ._se5xl{
+        ._se5xl {
             font-size: 1.5em;
         }
     }
-    ._d5ab{
+    ._d5ab {
         font-size: .8em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
     //padding
-    ._pdx3n{
+    ._pdx3n {
         padding-left: 0;
         padding-right: 0;
     }
+    // Table
+    ._tb3g5p {
+        th {
+            padding: 5px;
+            font-size: .8em;
+        }
+        td {
+            padding: 5px;
+            font-size: .7em;
+        }
+    }
 }
+
 // Modal
-._md{
-    padding : 30px;
+._md {
+    padding: 30px;
     display: none;
     position: fixed;
     left: 0;
@@ -680,24 +780,23 @@ input[type="text"]:focus, input[type="password"]:focus {
     height: 100%;
     z-index: 1;
     background-color: rgba($rgb-black, .4);
-    ._md5cu{
-        box-shadow: 0 4px 8px 0 rgba($rgb-black, .2), 0 6px 20px 0 rgba($rgb-black, 0.19);
+    ._md5cu {
         background-color: rgba($rgb-white, 1);
         z-index: 100;
         border-radius: 5px;
         margin-top: auto;
         margin-bottom: auto;
         padding-bottom: 15px;
-        input[type="text"]{
+        input[type="text"] {
             border: none;
             border-bottom: 1px solid $hx-silver;
             border-radius: 0px;
             padding: 0px;
-            &:focus{
+            &:focus {
                 border-bottom: 3px solid $_blue;
             }
         }
-        ._md5i{
+        ._md5i {
             background-color: $_1grey;
             border: 2px dashed $_2grey;
             position: relative;
@@ -705,7 +804,7 @@ input[type="text"]:focus, input[type="password"]:focus {
             padding-bottom: 15px;
             margin-top: 15px;
             margin-bottom: 15px;
-            input[type="file"]{
+            input[type="file"] {
                 opacity: 0;
                 position: absolute;
                 outline: none;
@@ -717,12 +816,8 @@ input[type="text"]:focus, input[type="password"]:focus {
         }
     }
 }
-._md5s{
-    @extend ._md;
-    display: none;
-    
-}
-.__x{
+
+.__x {
     position: absolute;
     left: 0;
     right: 0;
@@ -730,9 +825,10 @@ input[type="text"]:focus, input[type="password"]:focus {
     height: 100%;
     opacity: 0;
 }
-.__wr{
+
+.__wr {
     cursor: pointer;
-    &:hover{
+    &:hover {
         font-weight: bold;
     }
 }

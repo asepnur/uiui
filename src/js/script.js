@@ -6,3 +6,45 @@ $(document).ready(()=>{
         $("._md").css("display","none");
     });
 });
+
+$(document).ready(()=>{
+    $(".__att").hide();
+    $(".__dow").hide();
+    $(".__ast").hide();
+    $(".__grd").hide();
+    $("#btn_assign").click(()=>{
+        $(".__ass").show(200);
+        $(".__att").hide(200);
+        $(".__dow").hide(200);
+        $(".__ast").hide(200);
+        $(".__grd").hide(200);
+    });
+    $("#btn_attend").click(()=>{
+        $(".__ass").hide(200);
+        $(".__att").show(200);
+        $(".__dow").hide(200);
+        $(".__ast").hide(200);
+        $(".__grd").hide(200);
+    });
+    $("#btn_downld").click(()=>{
+        $(".__ass").hide(200);
+        $(".__att").hide(200);
+        $(".__dow").show(200);
+        $(".__ast").hide(200);
+        $(".__grd").hide(200);
+    });
+    $("#btn_assist").click(()=>{
+        $(".__ass").hide(200);
+        $(".__att").hide(200);
+        $(".__dow").hide(200);
+        $(".__ast").show(200);
+        $(".__grd").hide(200);
+    });
+    $("#btn_grade").click(()=>{
+        $(".__ass").hide(200);
+        $(".__att").hide(200);
+        $(".__dow").hide(200);
+        $(".__ast").hide(200);
+        $(".__grd").show(200);
+    });
+});
