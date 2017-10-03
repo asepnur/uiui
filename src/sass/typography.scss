@@ -109,29 +109,32 @@
 }
 
 // none
-._pd3n3t{ // padding extra large  top
+._pd3n3t{ // padding none large  top
     padding-top : 0px;
 }
-._pd3n3r{ // padding extra large default right
+._pd3n3r{ // padding none large default right
     padding-right : 0px;
 }
-._pd3n3b{ // padding extra large default bottom
+._pd3n3b{ // padding none large default bottom
     padding-bottom : 0px;
 }
-._pd3n3l{ // padding extra large default left
+._pd3n3l{ // padding none large default left
     padding-left : 0px;
 }
-._pd3n3tb{ // padding extra large default top & bottom
+._pd3n3tb{ // padding none large default top & bottom
     padding-top : 0px;
     padding-right : 0px;
 }
-._pd3n3lr{ // padding extra large default left & right
+._pd3n3lr{ // padding none large default left & right
     padding-left : 0px;
     padding-right : 0px;
 }
-._pd3n3a{ // padding extra large default all
+._pd3n3a{ // padding none large default all
     padding: 0px;
 }
+
+
+
 
 // Margin
 ._ma{ // margin default
@@ -268,6 +271,7 @@
     color: $hx-black;
     padding:0;
     margin:0;
+    line-height: 20px;
 }
 ._ct3s{ // small silver
     @extend ._ct;
@@ -320,3 +324,24 @@
     color: $_blue;
     font-size: 1em;
 }
+// display
+._dn{
+    display: none;
+}
+._db{
+    display: block;
+}
+// left and righ content page
+._pd3cl{ // padding spesial content left
+    padding-left : 15px;
+}
+._pd3cr{ // padding spesial content right
+    padding-right : 15px;
+}
+@media (min-width: 992px){
+    // left and righ content page
+    ._pd3cl{ // padding spesial content left
+        padding-left : 80px;
+    }
+}
+

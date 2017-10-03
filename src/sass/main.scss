@@ -3,6 +3,7 @@
 @import 'button';
 @import 'header';
 @import 'typography';
+@import 'table';
 
 input[type="text"], input[type="password"]{
     border-radius: 3px;
@@ -308,6 +309,10 @@ input[type="text"]:focus, input[type="password"]:focus {
             margin-bottom: 30px;
         }
     }
+    ._ta5l{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 // Image
@@ -440,7 +445,9 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px 15px 15px 15px;
-
+    ._ro:last-child{
+        padding-bottom: 35px;
+    }
     ._se5t{
         color: $hx-black;
 
@@ -480,6 +487,7 @@ input[type="text"]:focus, input[type="password"]:focus {
         text-align: center;
         color: $text-color;
         font-weight: normal;
+        cursor: pointer;
     }
 }
 ._se3a{
@@ -506,9 +514,6 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 ._ic5a{
     color: $hx-green;
-}
-._tb3i{
-
 }
 
 // Desc
@@ -662,6 +667,35 @@ input[type="text"]:focus, input[type="password"]:focus {
 .__wr{
     cursor: pointer;
     &:hover{
+        font-weight: bold;
+    }
+}
+._ta{
+    ._ta5l{
+        padding: 0;
+        list-style-type: none;
+        li{
+            display: inline;
+            border-left: 1.5px solid $hx-silver; 
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+            &:first-child{
+                border-left: none;
+                padding-left: 0px;
+            }
+            &:hover{
+                color: $_blue !important;
+                font-weight: bold;        
+            }
+            a{
+                @extend ._ct;
+                color: $hx-silver;
+            }
+        }
+    }
+    ._ta5l3a{
+        color: $_blue !important;
         font-weight: bold;
     }
 }

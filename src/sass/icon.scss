@@ -21,22 +21,22 @@
 }
 
 ._icx{// xsmall, black
-    font-size: .8em;
+    font-size: .9em;
 }
 ._ic3xs{// xsmall, silver
-    font-size: .8em;
+    font-size: .9em;
     color: $hx-silver;
 }
 ._ic3xm{// xsmall main
-    font-size: .8em;
+    font-size: .9em;
     color: $_main;
 }
 ._ic3xb{// xsmall blue
-    font-size: .8em;
+    font-size: .9em;
     color: $_blue;
 }
 ._ic3xr{// xsmall red
-    font-size: .8em;
+    font-size: .9em;
     color: $hx-red;
 
 }
@@ -78,4 +78,8 @@
 ._ic3lr{// large, red
     font-size: 3.125em;
     color: $hx-red;
+}
+
+._i3a{ // active
+    color: $hx-green;
 }

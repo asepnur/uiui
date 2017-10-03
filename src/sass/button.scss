@@ -6,13 +6,12 @@
     font-weight: 100; // default weight
     font-size: .8em; // default font size
     color: $hx-white;
-    min-width: 80px;
     width: 100%; 
     padding: 3px 0px; // default size
     border: none;
-    border-radius: 3px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 ._bt3b{ // blue color, small size button
@@ -46,12 +45,12 @@
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3g{ // main color, medium button 
+._bt5m3g{ // green color, medium button 
     @extend ._bt3g;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3r{ // main color, medium button 
+._bt5m3r{ // red color, medium button 
     @extend ._bt3r;
     font-size: 1em;
     padding: 5px 0px;

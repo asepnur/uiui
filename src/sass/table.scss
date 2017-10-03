@@ -1,0 +1,27 @@
+@import 'variable';
+@import 'typography';
+
+
+._tb{
+    border-collapse: separate;
+    border-spacing: 0px 5px;
+    width: 100%;
+    th{
+        @extend ._ct;
+        color: $hx-white;
+        font-weight: bold;
+        background-color: $_main;
+        padding: 5px;
+        border: 1px solid $_main;
+    }
+    td{
+        @extend ._ct;
+        font-size: .8em;
+        text-align: center;
+        color: $hx-black;
+        padding: 10px;
+        border: 1px solid $_main;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
