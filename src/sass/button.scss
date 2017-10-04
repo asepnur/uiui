@@ -1,81 +1,123 @@
 // Button library
 @import 'variable';
-._bt{
+._bt {
     font-family: $helvetica;
     background-color: $hx-silver; // default
     font-weight: 100; // default weight
     font-size: .8em; // default font size
     color: $hx-white;
-    width: 100%; 
+    width: 100%;
     padding: 3px 0px; // default size
     border: none;
     border-radius: 2px;
     margin-top: 12px;
     margin-bottom: 12px;
+    &:hover {
+        background-color: $hhx-silver;
+    }
 }
 
-._bt3b{ // blue color, small size button
+._bt3b {
+    // blue color, small size button
     @extend ._bt;
     background-color: $_blue;
+    &:hover {
+        background-color: $_hblue;
+    }
 }
-._bt3m{ // main color, small size button
+
+._bt3m {
+    // main color, small size button
     @extend ._bt;
     background-color: $_main;
+    &:hover {
+        background-color: $_hmain;
+    }
 }
-._bt3g{ // green color, small size button
+
+._bt3g {
+    // green color, small size button
     @extend ._bt;
     background-color: $hx-green;
+    &:hover {
+        background-color: $hhx-green;
+    }
 }
-._bt3r{ // red color, small size button
+
+._bt3r {
+    // red color, small size button
     @extend ._bt;
     background-color: $hx-red;
+    &:hover {
+        background-color: $hhx-red;
+    }
 }
-._bt5m{ // silver color, medium button 
+
+._bt5m {
+    // silver color, medium button 
     @extend ._bt;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3b{ // blue color, medium button 
+
+._bt5m3b {
+    // blue color, medium button 
     @extend ._bt3b;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3m{ // main color, medium button 
+
+._bt5m3m {
+    // main color, medium button 
     @extend ._bt3m;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3g{ // green color, medium button 
+
+._bt5m3g {
+    // green color, medium button 
     @extend ._bt3g;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5m3r{ // red color, medium button 
+
+._bt5m3r {
+    // red color, medium button 
     @extend ._bt3r;
     font-size: 1em;
     padding: 5px 0px;
 }
-._bt5l{ // silver/default color, large button 
+
+._bt5l {
+    // silver/default color, large button 
     @extend ._bt;
     font-size: 1.3em;
     padding: 8px 0px;
 }
-._bt5l3b{ // blue color, large button 
+
+._bt5l3b {
+    // blue color, large button 
     @extend ._bt3b;
     font-size: 1.3em;
     padding: 8px 0px;
 }
-._bt5l3m{ // main color, large button 
+
+._bt5l3m {
+    // main color, large button 
     @extend ._bt3m;
     font-size: 1.3em;
     padding: 8px 0px;
 }
-._bt5l3g{ // green color, large button 
+
+._bt5l3g {
+    // green color, large button 
     @extend ._bt3g;
     font-size: 1.3em;
     padding: 8px 0px;
 }
-._bt5l3r{ // red color, large button 
+
+._bt5l3r {
+    // red color, large button 
     @extend ._bt3r;
     font-size: 1.3em;
     padding: 8px 0px;
