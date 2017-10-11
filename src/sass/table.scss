@@ -1,27 +1,117 @@
 @import 'variable';
 @import 'typography';
-
-
-._tb{
+._tb {
     border-collapse: separate;
-    border-spacing: 0px 5px;
     width: 100%;
-    th{
+    th {
         @extend ._ct;
         color: $hx-white;
         font-weight: bold;
         background-color: $_main;
         padding: 5px;
-        border: 1px solid $_main;
+        border-left: 1px solid $_main;
+        border-top: none;
     }
-    td{
+    td {
         @extend ._ct;
         font-size: .8em;
         text-align: center;
         color: $hx-black;
         padding: 10px;
-        border: 1px solid $_main;
+        border-left: 1px solid $_main;
         margin-top: 3px;
         margin-bottom: 3px;
+    }
+    td:first-child,
+    th:first-child {
+        border-left: none;
+    }
+}
+
+._tb3g {
+    border-collapse: separate;
+    table-layout: fixed;
+    width: 100%;
+    th {
+        @extend ._ct;
+        color: $hx-black;
+        text-align: left;
+        border-bottom: 1px solid $hx-silver;
+        font-weight: bold;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    td {
+        @extend ._ct;
+        text-align: left;
+        font-size: .9em;
+        color: $hx-silver;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $hx-silver;
+    }
+    th,
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    td:first-child,
+    th:first-child {
+        width: 60%;
+    }
+}
+
+._tb3g34 {
+    @extend ._tb3g;
+    td:first-child,
+    th:first-child {
+        width: 20%;
+    }
+    td:last-child,
+    th:last-child {
+        width: 20%;
+    }
+}
+
+._tb3g343l {
+    @extend ._tb3g;
+    td:first-child,
+    th:first-child {
+        width: 10%;
+    }
+    td:last-child,
+    th:last-child {
+        width: 20%;
+    }
+}
+
+._tb3g353l {
+    @extend ._tb3g;
+    td:first-child,
+    th:first-child {
+        width: 10%;
+    }
+    td:last-child,
+    th:last-child {
+        width: 20%;
+    }
+}
+
+._tb3g36 {
+    @extend ._tb3g;
+    td:first-child,
+    th:first-child {
+        width: 10%;
+    }
+    td:last-child,
+    th:last-child {
+        width: 20%;
+    }
+    td:nth-child(5),
+    th:nth-child(5) {
+        width: 10%;
     }
 }

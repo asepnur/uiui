@@ -114,7 +114,7 @@
 ._pd3l3tb {
     // padding large default top & bottom
     padding-top: 15px;
-    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 ._pd3l3lr {
@@ -190,7 +190,7 @@
 ._pd3n3tb {
     // padding none large default top & bottom
     padding-top: 0px;
-    padding-right: 0px;
+    padding-bottom: 0px;
 }
 
 ._pd3n3lr {
@@ -289,6 +289,7 @@
 ._ma3l3t {
     // margin large  top
     margin-top: 15px;
+    margin-bottom: 0px;
 }
 
 ._ma3l3r {
@@ -458,6 +459,7 @@
 ._ct3m {
     // medium black
     @extend ._ct;
+    color: $hx-black;
     font-size: 1em;
 }
 
@@ -489,6 +491,13 @@
 
 ._db {
     display: block;
+}
+
+//ellipsis
+._el3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 // left and righ content page

@@ -4,6 +4,7 @@
 @import 'header';
 @import 'typography';
 @import 'table';
+select,
 input[type="text"],
 input[type="password"] {
     border-radius: 3px;
@@ -17,6 +18,8 @@ input[type="password"] {
     font-weight: normal;
 }
 
+select:focus,
+input[type="checkbox"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
     border: .5px solid rgba($rgb-silver, 1);
@@ -24,6 +27,14 @@ input[type="password"]:focus {
 
 textarea {
     @extend input[type="text"];
+    max-height: 225px;
+    resize: vertical;
+    overflow: auto;
+}
+
+._txa3l {
+    @extend textarea;
+    height: 420px;
     resize: vertical;
     overflow: auto;
 }
@@ -33,13 +44,12 @@ textarea {
     padding-right: 36px;
 }
 
-// Header Class 
-._he {
-    font-size: 2.2em;
-    color: $text-color;
-    margin: 0;
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
 
+// Header Class 
 ._he5md {
     margin-left: 15px;
     margin-top: 25px;
@@ -454,6 +464,78 @@ textarea {
         margin-left: 15px;
         margin-right: 15px;
     }
+    //overflow
+    ._ov3y {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 300px;
+    }
+    ._ov3y5m {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 225px;
+    }
+}
+
+// Toggle
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $hx-silver;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $hx-white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: $_main;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px $_main;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 // Image
@@ -871,6 +953,31 @@ textarea {
             }
             a {
                 @extend ._ct;
+                color: $hx-silver;
+            }
+        }
+    }
+    ._ta5lh {
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0px;
+        li {
+            border-bottom: 1px solid $hx-silver;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                color: $_blue !important;
+                font-weight: bold;
+            }
+            a {
+                @extend ._ct3m;
                 color: $hx-silver;
             }
         }
