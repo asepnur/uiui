@@ -4,6 +4,9 @@
 @import 'header';
 @import 'typography';
 @import 'table';
+@import 'icon';
+@import 'image';
+select,
 input[type="text"],
 input[type="password"] {
     border-radius: 3px;
@@ -17,6 +20,8 @@ input[type="password"] {
     font-weight: normal;
 }
 
+select:focus,
+input[type="checkbox"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
     border: .5px solid rgba($rgb-silver, 1);
@@ -24,6 +29,14 @@ input[type="password"]:focus {
 
 textarea {
     @extend input[type="text"];
+    max-height: 225px;
+    resize: vertical;
+    overflow: auto;
+}
+
+._txa3l {
+    @extend textarea;
+    height: 420px;
     resize: vertical;
     overflow: auto;
 }
@@ -31,6 +44,11 @@ textarea {
 ._cn input[type="password"] {
     margin-bottom: 24px;
     padding-right: 36px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
 
 // Description class
@@ -132,8 +150,8 @@ textarea {
 
 ._me3i {
     @extend ._me3xl;
-    font-weight: bold;
-    color: $text-color;
+    font-weight: normal;
+    color: $hx_black;
 }
 
 ._me3sm {
@@ -333,10 +351,87 @@ textarea {
             margin-bottom: 30px;
         }
     }
+    ._tb3g5p {
+        width: 100%;
+    }
     ._ta5l {
         margin-left: 15px;
         margin-right: 15px;
     }
+    //overflow
+    ._ov3y {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 300px;
+    }
+    ._ov3y5m {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 225px;
+    }
+}
+
+// Toggle
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 4px;
+    left: 1px;
+    right: 1px;
+    bottom: 4px;
+    background-color: $hx-silver;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    background-color: $hx-white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 30px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    top: 2px;
+    left: 8px;
+}
+
+input:checked+.slider {
+    background-color: $_main;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px $_main;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
 }
 
 // Image
@@ -479,7 +574,8 @@ textarea {
     position: relative;
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
-    margin: 15px 15px 15px 15px;
+    margin: 15px;
+    padding-bottom: 15px;
     ._ro:last-child {
         padding-bottom: 35px;
     }
@@ -558,6 +654,24 @@ textarea {
     margin-top: 0px;
 }
 
+._tb3g5p {
+    border-collapse: separate;
+    border-radius: 5px;
+    background-color: $_3grey;
+    text-align: left;
+    width: 100%;
+    th {
+        color: $hx-white;
+        padding: 15px;
+        font-size: 1em;
+    }
+    td {
+        background-color: $hx-white;
+        padding: 15px;
+        font-size: .9em;
+    }
+}
+
 @media (max-width: 992px) {
     //Navbar 
     ._n {
@@ -593,10 +707,10 @@ textarea {
                 color: $hx-white;
                 background-color: $_blue;
             }
-            ._n3a {
-                color: $hx-white;
-                background-color: $_blue;
-            }
+        }
+        ._n3a {
+            color: $hx-white;
+            background-color: $_blue;
         }
     }
     ._n51 {
@@ -638,6 +752,46 @@ textarea {
     ._pdx3n {
         padding-left: 0;
         padding-right: 0;
+    }
+    // Table
+    ._tb3g5p {
+        th {
+            padding: 5px;
+            font-size: .8em;
+        }
+        td {
+            padding: 5px;
+            font-size: .7em;
+        }
+    }
+}
+
+// Error message
+._erm {
+    position: relative;
+    display: block;
+    padding: 0;
+    ._erm5cn {
+        position: absolute;
+        background-color: rgba($rgb-white, 0.8);
+        display: block;
+        text-align: center;
+        color: $hx-red;
+        width: 100%;
+        z-index: 100;
+        font-weight: 600;
+        border-bottom: 1px solid $hx-red;
+        border-radius: 2px;
+        p {
+            position: relative;
+            ._erm5c {
+                color: $hx-white;
+                position: absolute;
+                right: 15px;
+                top: 2px;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -735,8 +889,37 @@ textarea {
             }
         }
     }
+    ._ta5lh {
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0px;
+        li {
+            border-bottom: 1px solid $hx-silver;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                color: $_blue !important;
+                font-weight: bold;
+            }
+            a {
+                @extend ._ct3m;
+                color: $hx-silver;
+            }
+        }
+    }
     ._ta5l3a {
         color: $_blue !important;
         font-weight: bold;
     }
+}
+
+._cn3ep {
+    position: relative;
 }
