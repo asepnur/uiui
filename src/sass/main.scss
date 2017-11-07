@@ -2,8 +2,11 @@
 @import 'grid';
 @import 'button';
 @import 'header';
+@import 'image';
 @import 'typography';
 @import 'table';
+@import 'mixin';
+@import 'loading';
 select,
 input[type="text"],
 input[type="password"] {
@@ -76,7 +79,7 @@ input[type="checkbox"] {
 ._he5co {
     h4:after {
         text-align: left;
-        content: " ";
+        content: "jiksdjkadjk";
         width: 50px;
         height: 5px;
         background: $text-color;
@@ -109,14 +112,6 @@ input[type="checkbox"] {
     @extend ._he;
     margin-top: 60px;
     margin-bottom: 10px;
-}
-
-._he3m {
-    @extend ._he;
-    color: $hx-white;
-    margin-top: 50px;
-    font-weight: 100;
-    font-family: $PT-sans;
 }
 
 ._he3cm {
@@ -339,6 +334,7 @@ input[type="checkbox"] {
         height: 100%;
         background: url('/img/BG.png');
         background-size: cover;
+        @include fill-available();
     }
     ._f5a {
         ._bl {
@@ -666,11 +662,7 @@ input:checked+.slider:before {
 ._f5m {
     height: 100%;
     background-color: $_1grey;
-}
-
-._f5a {
-    height: 100%;
-    background-color: $_1grey;
+    @include fill-available();
 }
 
 // Section 
@@ -740,6 +732,11 @@ input:checked+.slider:before {
 
 ._se3dr {
     background-color: $hx-gray;
+}
+
+// Line
+._hr3m {
+    margin: 10px 10px 10px 10px;
 }
 
 // Icon 
@@ -985,5 +982,37 @@ input:checked+.slider:before {
     ._ta5l3a {
         color: $_blue !important;
         font-weight: bold;
+    }
+}
+
+@media (max-width: 992px) {
+    ._ta {
+        ._ta5lh {
+            padding: 0;
+            list-style-type: none;
+            li {
+                display: inline;
+                border-left: 1.5px solid $hx-silver;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0px;
+                }
+                &:hover {
+                    color: $_blue !important;
+                    font-weight: bold;
+                }
+                a {
+                    font-family: $PT-sans;
+                    font-size: .9em;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 20px;
+                    color: $hx-silver;
+                }
+            }
+        }
     }
 }
