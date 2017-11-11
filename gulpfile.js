@@ -57,7 +57,6 @@ gulp.task(task.js, () => {
 // IMG
 gulp.task(task.img, () => {
     return gulp.src(paths.srcImg)
-        .pipe(imagemin())
         .pipe(gulp.dest(paths.devImg))
 })
 
