@@ -3,6 +3,7 @@
 @import 'button';
 @import 'header';
 @import 'image';
+@import 'icon';
 @import 'typography';
 @import 'table';
 @import 'mixin';
@@ -79,7 +80,7 @@ input[type="checkbox"] {
 ._he5co {
     h4:after {
         text-align: left;
-        content: "jiksdjkadjk";
+        content: " ";
         width: 50px;
         height: 5px;
         background: $text-color;
@@ -464,12 +465,12 @@ input[type="checkbox"] {
     ._ov3y {
         overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 300px;
+        max-height: 350px;
     }
     ._ov3y5m {
         overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 225px;
+        max-height: 230px;
     }
 }
 
@@ -710,7 +711,7 @@ input:checked+.slider:before {
         bottom: 0;
         text-align: center;
         color: $text-color;
-        font-weight: normal;
+        font-weight: bold;
         cursor: pointer;
     }
 }
@@ -728,7 +729,13 @@ input:checked+.slider:before {
 }
 
 ._se3n {
+    box-shadow: none;
     background-color: $_1grey;
+}
+
+._se3a3n3lr {
+    background-color: $hx-white;
+    margin: 15px 0px 15px 0px;
 }
 
 ._se3dr {
@@ -744,6 +751,7 @@ input:checked+.slider:before {
 ._ic {
     color: $text-color;
     margin-top: 15px;
+    margin-left: 5px;
 }
 
 ._ic5a {
