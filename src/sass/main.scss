@@ -667,6 +667,35 @@ input:checked+.slider:before {
     @include fill-available();
 }
 
+// Pagination
+._pg {
+    display: inline-block;
+    /* margin: 0; */
+    margin-top: 15px;
+    /* position: absolute; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a {
+        color: $hx_black;
+        float: left;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    ._active {
+        background-color: $_main;
+        color: $hx_white;
+    }
+    a:hover {
+        background-color: $_2grey;
+    }
+    ._active:hover {
+        background-color: $_main;
+    }
+}
+
 // Section 
 ._se {
     position: relative;
@@ -921,6 +950,18 @@ input:checked+.slider:before {
             }
         }
     }
+    ._md5r {
+        background-color: rgba($rgb-white, 1);
+        z-index: 100;
+        border-radius: 5px;
+        margin-top: 50%;
+        margin-bottom: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        hr {
+            margin: 10px 5px 5px 5px;
+        }
+    }
 }
 
 .__x {
@@ -971,9 +1012,6 @@ input:checked+.slider:before {
             border-bottom: 1px solid $hx-silver;
             padding-top: 15px;
             padding-bottom: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             cursor: pointer;
             &:last-child {
                 border-bottom: none;
@@ -994,13 +1032,89 @@ input:checked+.slider:before {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 412px) {
     ._ta {
         ._ta5lh {
-            padding: 0;
+            display: flex;
+            flex-grow: 1;
+            padding: 0.5em;
             list-style-type: none;
+            font-size: 0.8em;
             li {
                 display: inline;
+                border-bottom: none;
+                border-left: 1.5px solid $hx-silver;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0px;
+                }
+                &:hover {
+                    color: $_blue !important;
+                    font-weight: bold;
+                }
+                a {
+                    font-family: $PT-sans;
+                    font-size: .9em;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 20px;
+                    color: $hx-silver;
+                }
+            }
+        }
+    }
+}
+
+@media (width: 425px) {
+    ._ta {
+        ._ta5lh {
+            display: flex;
+            flex-grow: 1;
+            padding: 0.5em;
+            list-style-type: none;
+            font-size: 1em;
+            li {
+                display: inline;
+                border-bottom: none;
+                border-left: 1.5px solid $hx-silver;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0px;
+                }
+                &:hover {
+                    color: $_blue !important;
+                    font-weight: bold;
+                }
+                a {
+                    font-family: $PT-sans;
+                    font-size: .9em;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 20px;
+                    color: $hx-silver;
+                }
+            }
+        }
+    }
+}
+
+@media (width: 768px) {
+    ._ta {
+        ._ta5lh {
+            display: block;
+            flex-grow: 1;
+            padding: 0.5em;
+            list-style-type: none;
+            font-size: 1.1em;
+            li {
+                display: inline;
+                border-bottom: none;
                 border-left: 1.5px solid $hx-silver;
                 padding-left: 5px;
                 padding-right: 5px;
