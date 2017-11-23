@@ -287,12 +287,6 @@ hr {
     padding: 0;
 }
 
-@media (min-width: 992px) {
-    ._cn {
-        width: 100%;
-    }
-}
-
 ._ro {
     margin-left: 0px;
     margin-right: 0px;
@@ -550,6 +544,9 @@ hr {
 }
 
 @media (min-width: 992px) {
+    ._cn {
+        width: 100%;
+    }
     ._c5m31,
     ._c5m32,
     ._c5m33,

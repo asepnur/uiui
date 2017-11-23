@@ -8,6 +8,16 @@
 @import 'table';
 @import 'mixin';
 @import 'loading';
+html,
+body {
+    height: 100%;
+    max-width: 1500px;
+}
+
+body {
+    margin: 0;
+}
+
 select,
 input[type="text"],
 input[type="password"] {
@@ -41,11 +51,6 @@ textarea {
     height: 420px;
     resize: vertical;
     overflow: auto;
-}
-
-._cn input[type="password"] {
-    margin-bottom: 24px;
-    padding-right: 36px;
 }
 
 input[type="checkbox"] {
@@ -171,7 +176,7 @@ input[type="checkbox"] {
 ._me5ts {
     color: $text-color;
     font-size: .8em;
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: right;
 }
 
@@ -241,6 +246,12 @@ input[type="checkbox"] {
     //background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     background: url('/img/BG.png');
     background-size: cover;
+    @include flex();
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 200px;
+    }
 }
 
 ._bl5c {
@@ -330,19 +341,27 @@ input[type="checkbox"] {
     font-size: 1em;
 }
 
+._f5a {
+    height: 100%;
+    width: 100%;
+    // justify-content: center;
+    background: white;
+}
+
 @media (min-width: 992px) {
     ._f5a {
-        height: 100%;
         background: url('/img/BG.png');
         background-size: cover;
-        @include fill-available();
+        @include flex();
+        align-items: center;
+        min-height: 500px;
+        // justify-content: center;
     }
     ._f5a {
         ._bl {
             height: auto;
-            margin-top: 180px;
             background-color: rgba($rgb-white, 1);
-            border-radius: 10px;
+            border-radius: 5px;
         }
         ._bl5b {
             position: absolute;
@@ -353,6 +372,9 @@ input[type="checkbox"] {
             background-size: cover;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
+            img {
+                opacity: 0;
+            }
         }
         ._bl5c {
             width: 0;
@@ -553,9 +575,9 @@ input:checked+.slider:before {
 }
 
 ._i5h {
-    font-size: 2em;
-    margin-left: 0px;
-    margin-top: 20px;
+    font-size: 1.4em;
+    margin-left: 5px;
+    margin-top: 18px;
     display: inline-block;
 }
 
@@ -670,7 +692,7 @@ input:checked+.slider:before {
 // Section 
 ._se {
     position: relative;
-    border-radius: 2px;
+    border-radius: 1px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px 15px 15px 15px;
     ._ro:last-child {
@@ -782,7 +804,44 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 992px) {
-    //Navbar 
+    ._ta {
+        ._ta5lh {
+            padding: 0;
+            list-style-type: none;
+            li {
+                display: inline;
+                border-left: 1.5px solid $hx-silver;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0px;
+                }
+                &:hover {
+                    color: $_blue !important;
+                    font-weight: bold;
+                }
+                a {
+                    font-family: $PT-sans;
+                    font-size: .9em;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 20px;
+                    color: $hx-silver;
+                }
+            }
+        }
+    }
+    //Navbar
+    ._mn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        background-color: $_1grey;
+    }
     ._n {
         margin: 0;
         padding: 0;
@@ -991,37 +1050,5 @@ input:checked+.slider:before {
     ._ta5l3a {
         color: $_blue !important;
         font-weight: bold;
-    }
-}
-
-@media (max-width: 992px) {
-    ._ta {
-        ._ta5lh {
-            padding: 0;
-            list-style-type: none;
-            li {
-                display: inline;
-                border-left: 1.5px solid $hx-silver;
-                padding-left: 5px;
-                padding-right: 5px;
-                cursor: pointer;
-                &:first-child {
-                    border-left: none;
-                    padding-left: 0px;
-                }
-                &:hover {
-                    color: $_blue !important;
-                    font-weight: bold;
-                }
-                a {
-                    font-family: $PT-sans;
-                    font-size: .9em;
-                    padding: 0;
-                    margin: 0;
-                    line-height: 20px;
-                    color: $hx-silver;
-                }
-            }
-        }
     }
 }
