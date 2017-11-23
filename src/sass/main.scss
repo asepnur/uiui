@@ -386,15 +386,16 @@ input[type="checkbox"] {
     ._n {
         margin: 0;
         padding: 0;
-        display: inline-block;
+        @include flex();
+        flex-direction: column;
         visibility: visible;
         height: 100%;
+        min-height: 568px;
         background-color: $_dblue;
         position: fixed;
         left: 0;
         top: 0;
-        width: auto;
-        overflow: auto;
+        overflow: hidden;
         z-index: 1;
         list-style-type: none;
         box-shadow: 0.5px 0.5px 1px $hx-black;
@@ -416,17 +417,21 @@ input[type="checkbox"] {
                 color: $hx-white;
                 background-color: $_blue;
             }
+            &._n3a {
+                color: $hx-white;
+                background-color: $_blue;
+            }
         }
-        ._n3a {
-            color: $hx-white;
-            background-color: $_blue;
+        ._n51 {
+            flex-grow: 10;
         }
-    }
-    ._n51 {
-        height: 75%;
-    }
-    ._n52 {
-        height: 25%;
+        ._n52 {
+            @include flex();
+            flex-direction: column;
+            li {
+                justify-content: flex-end;
+            }
+        }
     }
     // Padding none
     ._pd5n {
@@ -845,15 +850,17 @@ input:checked+.slider:before {
     ._n {
         margin: 0;
         padding: 0;
-        display: inline-block;
+        @include flex();
+        flex-direction: column;
         visibility: hidden;
         height: 100%;
+        min-height: 525px;
         background-color: $_dblue;
         position: fixed;
         left: 0;
         top: 0;
         width: auto;
-        overflow: auto;
+        overflow: hidden;
         z-index: 1;
         list-style-type: none;
         box-shadow: 0.5px 0.5px 1px $hx-black;
@@ -871,21 +878,21 @@ input:checked+.slider:before {
                     text-align: center;
                 }
             }
-            &:hover {
-                color: $hx-white;
-                background-color: $_blue;
-            }
-            ._n3a {
+            @at-root ._n3a {
                 color: $hx-white;
                 background-color: $_blue;
             }
         }
-    }
-    ._n51 {
-        height: 70%;
-    }
-    ._n52 {
-        height: 30%;
+        ._n51 {
+            flex-grow: 10;
+        }
+        ._n52 {
+            @include flex();
+            flex-direction: column;
+            li {
+                justify-content: flex-end;
+            }
+        }
     }
     ._cn5n:hover ul {
         visibility: visible;
