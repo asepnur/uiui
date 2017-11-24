@@ -246,7 +246,7 @@ input[type="checkbox"] {
     //background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     background: url('/img/BG.png');
     background-size: cover;
-    @include flex();
+    @include flex-box();
     align-items: center;
     justify-content: center;
     img {
@@ -349,10 +349,16 @@ input[type="checkbox"] {
 }
 
 @media (min-width: 992px) {
+    ._se {
+        font-size: 1.2em !important;
+    }
+    ._se3inf {
+        font-size: 1.2em !important;
+    }
     ._f5a {
         background: url('/img/BG.png');
         background-size: cover;
-        @include flex();
+        @include flex-box();
         align-items: center;
         min-height: 500px;
         // justify-content: center;
@@ -386,7 +392,7 @@ input[type="checkbox"] {
     ._n {
         margin: 0;
         padding: 0;
-        @include flex();
+        @include flex-box();
         flex-direction: column;
         visibility: visible;
         height: 100%;
@@ -426,8 +432,8 @@ input[type="checkbox"] {
             flex-grow: 10;
         }
         ._n52 {
-            @include flex();
-            flex-direction: column;
+            @include flex-box();
+            @include flex-direction(column);
             li {
                 justify-content: flex-end;
             }
@@ -449,27 +455,6 @@ input[type="checkbox"] {
     }
     ._me5ts {
         font-size: 1em;
-    }
-    // Section Web
-    ._se {
-        ._se5t {
-            font-size: 1.1em;
-        }
-        ._se5ct {
-            font-size: 1em;
-        }
-        ._se5c {
-            font-size: 1em;
-        }
-        ._se5i {
-            width: 1em;
-        }
-        ._se5m {
-            font-size: .9em;
-        }
-        ._se5xl {
-            font-size: 3em;
-        }
     }
     ._md5cu {
         padding: 0 50px 50px 50px;
@@ -696,13 +681,6 @@ input:checked+.slider:before {
 
 // Section 
 ._se {
-    position: relative;
-    border-radius: 1px;
-    box-shadow: 0.5px 0.5px 1px $hx-silver;
-    margin: 15px 15px 15px 15px;
-    ._ro:last-child {
-        padding-bottom: 35px;
-    }
     ._se5t {
         color: $hx-black;
     }
@@ -777,8 +755,6 @@ input:checked+.slider:before {
 // Icon 
 ._ic {
     color: $text-color;
-    margin-top: 15px;
-    margin-left: 5px;
 }
 
 ._ic5a {
@@ -805,6 +781,279 @@ input:checked+.slider:before {
         background-color: $hx-white;
         padding: 15px;
         font-size: .9em;
+    }
+}
+
+._se {
+    position: relative;
+    border-radius: 1px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    width: 100%;
+    font-size: 1em;
+    thead {
+        padding: 5px;
+        background-color: $_3grey;
+        th {
+            text-align: left;
+            font-size: 1.3em;
+            padding: 5px;
+        }
+    }
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            &:first-child {
+                border-top: 1px solid $hx-silver;
+            }
+            &:last-child {
+                border-bottom: 1px solid $hx-silver;
+            }
+            &:nth-child(2n) {
+                background-color: $_4grey;
+            }
+            td {
+                //max-height: 50px;
+                padding: 5px;
+                &:nth-child(1) {
+                    @include flex(1);
+                }
+                &:nth-child(2) {
+                    @include flex(2);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:nth-child(3) {
+                    @include flex(7);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:nth-child(4) {
+                    @include flex(2);
+                    @include flex-box();
+                    @include justify-content(center);
+                    @include align-items(center);
+                }
+            }
+        }
+    }
+    tfoot {
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        @include flex-box();
+        @include flex-direction(row);
+        tr {
+            @include flex-box();
+            td {
+                padding: 5px;
+                &:first-child {
+                    border-bottom-left-radius: 2px;
+                    border-top-left-radius: 2px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 2px;
+                    border-top-right-radius: 2px;
+                }
+            }
+            &:first-child {
+                @include flex(1);
+                @include flex-box();
+                @include flex-direction(row);
+                justify-content: flex-start;
+                td {}
+            }
+            &:last-child {
+                @include flex(1);
+                @include flex-box();
+                @include flex-direction(row);
+                align-content: flex-end;
+                justify-content: flex-end;
+                padding-right: 5px;
+                td {
+                    border-left: 1px solid $hx-silver;
+                    border-top: 1px solid $hx-silver;
+                    border-bottom: 1px solid $hx-silver;
+                    &:last-child {
+                        border-right: 1px solid $hx-silver;
+                    }
+                }
+            }
+        }
+    }
+    ._se5t {
+        font-size: .9em;
+    }
+    ._se5ct {
+        font-size: .9em;
+    }
+    ._se5c {
+        font-size: .9em;
+    }
+    ._se5m {
+        font-size: .9em;
+    }
+    ._se5xl {
+        font-size: 1.5em;
+    }
+}
+
+._se3inf {
+    position: relative;
+    border-radius: 1px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    width: 100%;
+    font-size: 1em;
+    thead {
+        padding: 5px;
+        background-color: $_3grey;
+        th {
+            text-align: left;
+            font-size: 1.3em;
+            padding: 5px;
+        }
+    }
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            &:first-child {
+                border-top: 1px solid $hx-silver;
+            }
+            &:last-child {
+                border-bottom: 1px solid $hx-silver;
+            }
+            &:nth-child(2n) {
+                background-color: $_4grey;
+            }
+            td {
+                p {
+                    margin: 0;
+                    &:first-child {
+                        font-weight: bold;
+                        font-size: 1em;
+                    }
+                    &:last-child {
+                        font-size: .8em;
+                    }
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+                //max-height: 50px;
+                padding: 5px;
+                &:nth-child(1) {
+                    @include flex(2);
+                }
+                &:nth-child(2) {
+                    @include flex(8);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:nth-child(3) {
+                    @include flex(1);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+._se3s {
+    position: relative;
+    border-radius: 1px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    width: 100%;
+    thead {
+        padding: 5px;
+        background-color: $_3grey;
+        th {
+            text-align: left;
+            font-size: 1.3em;
+            padding: 5px;
+        }
+    }
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            &:first-child {
+                border-top: 1px solid $hx-silver;
+            }
+            &:nth-child(2n) {
+                background-color: $_4grey;
+            }
+            td {
+                //max-height: 50px;
+                padding: 5px;
+                &:nth-child(1) {
+                    @include flex(3);
+                }
+                &:nth-child(2) {
+                    @include flex(3);
+                }
+                &:nth-child(3) {
+                    @include flex(4);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:nth-child(4) {
+                    @include flex(2);
+                    @include flex-box();
+                    @include justify-content(center);
+                    @include align-items(center);
+                }
+            }
+        }
+    }
+    ._se5t {
+        font-size: .9em;
+    }
+    ._se5ct {
+        font-size: .9em;
+    }
+    ._se5c {
+        font-size: .9em;
+    }
+    ._se5m {
+        font-size: .9em;
+    }
+    ._se5xl {
+        font-size: 1.5em;
     }
 }
 
@@ -850,7 +1099,7 @@ input:checked+.slider:before {
     ._n {
         margin: 0;
         padding: 0;
-        @include flex();
+        @include flex-box();
         flex-direction: column;
         visibility: hidden;
         height: 100%;
@@ -860,12 +1109,12 @@ input:checked+.slider:before {
         left: 0;
         top: 0;
         width: auto;
-        overflow: hidden;
+        overflow: auto;
         z-index: 1;
         list-style-type: none;
         box-shadow: 0.5px 0.5px 1px $hx-black;
-        margin-left: -60px;
-        -webkit-transition: all 0.5s linear;
+        margin-left: -45px;
+        -webkit-transition: all 0.2s linear;
         /* Safari and Chrome */
         li {
             padding: 15px;
@@ -887,35 +1136,16 @@ input:checked+.slider:before {
             flex-grow: 10;
         }
         ._n52 {
-            @include flex();
-            flex-direction: column;
+            @include flex-box();
+            @include flex-direction(column);
             li {
-                justify-content: flex-end;
+                @include justify-content(flex-end);
             }
         }
     }
     ._cn5n:hover ul {
         visibility: visible;
         margin-left: 0px;
-    }
-    ._se {
-        margin-left: 0px;
-        margin-right: 0px;
-        ._se5t {
-            font-size: .9em;
-        }
-        ._se5ct {
-            font-size: .9em;
-        }
-        ._se5c {
-            font-size: .9em;
-        }
-        ._se5m {
-            font-size: .9em;
-        }
-        ._se5xl {
-            font-size: 1.5em;
-        }
     }
     ._d5ab {
         font-size: .8em;

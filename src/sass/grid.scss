@@ -725,6 +725,8 @@ hr {
 }
 
 ._cn {
+    height: 100%;
+    background-color: $_1grey;
     &:before,
     &:after {
         content: " ";

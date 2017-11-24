@@ -400,12 +400,6 @@
     margin: 0px;
 }
 
-//
-._ma3mn {
-    //margin top content
-    margin-top: 40px;
-}
-
 // Content text 
 ._ct {
     // Default ( small black)
@@ -524,5 +518,13 @@
     ._pd3cl {
         // padding spesial content left
         padding-left: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    //
+    ._ma3mn {
+        //margin top content
+        margin-top: 40px;
     }
 }
