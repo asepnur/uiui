@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+table {
+    width: 100%;
+}
+
 select,
 input[type="text"],
 input[type="password"] {
@@ -349,6 +353,15 @@ input[type="checkbox"] {
 }
 
 @media (min-width: 992px) {
+    ._ta {
+        ._ta5l {
+            padding: 7px !important;
+            li {
+                font-size: 1.2em !important;
+                padding: 10px 15px !important;
+            }
+        }
+    }
     ._se {
         font-size: 1.2em !important;
     }
@@ -468,10 +481,6 @@ input[type="checkbox"] {
     }
     ._tb3g5p {
         width: 100%;
-    }
-    ._ta5l {
-        margin-left: 15px;
-        margin-right: 15px;
     }
     //overflow
     ._ov3y {
@@ -708,6 +717,35 @@ input:checked+.slider:before {
     }
 }
 
+// List course
+._se3lc {
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+    background-color: $hx-white;
+    div {
+        padding: 15px 25px;
+        p {
+            &:first-child {
+                color: rgba($hx-black, 1);
+                font-weight: bold;
+            }
+            &:last-child {
+                color: rgba($hx-black, .8);
+            }
+        }
+        a {
+            color: $_blue;
+            font-weight: bold;
+        }
+    }
+}
+
 // Section 
 ._se {
     ._se5t {
@@ -815,7 +853,7 @@ input:checked+.slider:before {
 
 ._se {
     position: relative;
-    border-radius: 1px;
+    border-radius: 5px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px;
     margin-left: 0px;
@@ -841,12 +879,6 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
-            &:first-child {
-                border-top: 1px solid $hx-silver;
-            }
-            &:last-child {
-                border-bottom: 1px solid $hx-silver;
-            }
             &:nth-child(2n) {
                 background-color: $_4grey;
             }
@@ -878,13 +910,16 @@ input:checked+.slider:before {
         }
     }
     tfoot {
-        margin: 5px;
-        padding: 5px;
+        background-color: $_1grey;
         width: 100%;
         @include flex-box();
         @include flex-direction(row);
+        @include justify-content(center);
         tr {
+            margin: 5px;
+            padding: 5px;
             @include flex-box();
+            @include justify-content(center);
             td {
                 padding: 5px;
                 &:first-child {
@@ -907,17 +942,7 @@ input:checked+.slider:before {
                 @include flex(1);
                 @include flex-box();
                 @include flex-direction(row);
-                align-content: flex-end;
-                justify-content: flex-end;
-                padding-right: 5px;
-                td {
-                    border-left: 1px solid $hx-silver;
-                    border-top: 1px solid $hx-silver;
-                    border-bottom: 1px solid $hx-silver;
-                    &:last-child {
-                        border-right: 1px solid $hx-silver;
-                    }
-                }
+                @include justify-content(center);
             }
         }
     }
@@ -940,20 +965,19 @@ input:checked+.slider:before {
 
 ._se3inf {
     position: relative;
-    border-radius: 1px;
-    box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px;
     margin-left: 0px;
     margin-right: 0px;
-    background-color: $hx-white;
+    background-color: $_1grey;
     @include flex-box();
     @include flex-direction(column);
     width: 100%;
     font-size: 1em;
     thead {
         padding: 5px;
-        background-color: $_3grey;
+        //background-color: $hx-white;
         th {
+            color: $_blue;
             text-align: left;
             font-size: 1.3em;
             padding: 5px;
@@ -966,14 +990,12 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
+            border-bottom: 1px solid $hx_silver;
             &:first-child {
                 border-top: 1px solid $hx-silver;
             }
             &:last-child {
                 border-bottom: 1px solid $hx-silver;
-            }
-            &:nth-child(2n) {
-                background-color: $_4grey;
             }
             td {
                 p {
@@ -982,13 +1004,20 @@ input:checked+.slider:before {
                         font-weight: bold;
                         font-size: 1em;
                     }
+                    &:nth-child(2) {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: .9em;
+                    }
                     &:last-child {
-                        font-size: .8em;
+                        font-size: .7em;
+                        color: $hx-silver;
                     }
                 }
                 img {
-                    width: 40px;
-                    height: 40px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 3px;
                 }
                 //max-height: 50px;
                 padding: 5px;
@@ -1014,7 +1043,7 @@ input:checked+.slider:before {
 
 ._se3s {
     position: relative;
-    border-radius: 1px;
+    border-radius: 5px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
     margin: 15px;
     margin-left: 0px;
@@ -1039,9 +1068,6 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
-            &:first-child {
-                border-top: 1px solid $hx-silver;
-            }
             &:nth-child(2n) {
                 background-color: $_4grey;
             }
@@ -1277,26 +1303,45 @@ input:checked+.slider:before {
 }
 
 ._ta {
+    box-sizing: border-box;
     ._ta5l {
-        padding: 0;
+        padding: 6px;
+        margin: 0;
         list-style-type: none;
+        border-bottom: 1px solid $hx-silver;
+        ._active {
+            i {
+                color: $hx-black;
+            }
+            a {
+                color: $hx-black !important;
+                font-weight: bold;
+            }
+            background-color: $_1grey;
+            border: 1px solid silver;
+            border-bottom: 0;
+            border-top: 2px solid $_hblue;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
         li {
+            font-size: 1.2em;
             display: inline;
-            border-left: 1.5px solid $hx-silver;
-            padding-left: 5px;
-            padding-right: 5px;
             cursor: pointer;
+            padding: 9px 15px;
             &:first-child {
                 border-left: none;
-                padding-left: 0px;
             }
-            &:hover {
-                color: $_blue !important;
+            &:hover a:hover {
+                color: $hx-black !important;
                 font-weight: bold;
             }
             a {
                 @extend ._ct;
-                color: $hx-silver;
+                color: rgba($rgb-black, .5);
+            }
+            i {
+                color: rgba($rgb-black, .5);
             }
         }
     }
@@ -1325,113 +1370,5 @@ input:checked+.slider:before {
     ._ta5l3a {
         color: $_blue !important;
         font-weight: bold;
-    }
-}
-
-@media (max-width: 412px) {
-    ._ta {
-        ._ta5lh {
-            display: flex;
-            flex-grow: 1;
-            padding: 0.5em;
-            list-style-type: none;
-            font-size: 0.8em;
-            li {
-                display: inline;
-                border-bottom: none;
-                border-left: 1.5px solid $hx-silver;
-                padding-left: 5px;
-                padding-right: 5px;
-                cursor: pointer;
-                &:first-child {
-                    border-left: none;
-                    padding-left: 0px;
-                }
-                &:hover {
-                    color: $_blue !important;
-                    font-weight: bold;
-                }
-                a {
-                    font-family: $PT-sans;
-                    font-size: .9em;
-                    padding: 0;
-                    margin: 0;
-                    line-height: 20px;
-                    color: $hx-silver;
-                }
-            }
-        }
-    }
-}
-
-@media (width: 425px) {
-    ._ta {
-        ._ta5lh {
-            display: flex;
-            flex-grow: 1;
-            padding: 0.5em;
-            list-style-type: none;
-            font-size: 1em;
-            li {
-                display: inline;
-                border-bottom: none;
-                border-left: 1.5px solid $hx-silver;
-                padding-left: 5px;
-                padding-right: 5px;
-                cursor: pointer;
-                &:first-child {
-                    border-left: none;
-                    padding-left: 0px;
-                }
-                &:hover {
-                    color: $_blue !important;
-                    font-weight: bold;
-                }
-                a {
-                    font-family: $PT-sans;
-                    font-size: .9em;
-                    padding: 0;
-                    margin: 0;
-                    line-height: 20px;
-                    color: $hx-silver;
-                }
-            }
-        }
-    }
-}
-
-@media (width: 768px) {
-    ._ta {
-        ._ta5lh {
-            display: block;
-            flex-grow: 1;
-            padding: 0.5em;
-            list-style-type: none;
-            font-size: 1.1em;
-            li {
-                display: inline;
-                border-bottom: none;
-                border-left: 1.5px solid $hx-silver;
-                padding-left: 5px;
-                padding-right: 5px;
-                cursor: pointer;
-                &:first-child {
-                    border-left: none;
-                    padding-left: 0px;
-                }
-                &:hover {
-                    color: $_blue !important;
-                    font-weight: bold;
-                }
-                a {
-                    font-family: $PT-sans;
-                    font-size: .9em;
-                    padding: 0;
-                    margin: 0;
-                    line-height: 20px;
-                    color: $hx-silver;
-                }
-            }
-        }
     }
 }
