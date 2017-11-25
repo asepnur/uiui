@@ -122,3 +122,15 @@
     font-size: 1.3em;
     padding: 8px 0px;
 }
+
+._bt5xs3b {
+    @extend ._bt3b;
+    border-radius: 3px;
+    font-family: "Helvetica";
+    border: none;
+    padding: 5px 5px !important;
+    color: #FFFFFF;
+    width: 75px !important;
+    font-weight: 100;
+    margin: 0;
+}

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="theme-color" content="#217fbd">
     <!-- inject:css -->
     <!-- endinject -->
@@ -21,14 +22,15 @@
                                 <ul class="_n">
                                     <div class="_n51">
                                         <li class="_n3a"><img class="_i3c" src="/img/icon/white/logo copy 4.png" alt="logo"></li>
-                                        <li><a href=""><i class="fa fa-clone" aria-hidden="true"></i></a></li>
-                                        <li><a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a></li>
+                                        <li><a href=""><i class="fa fa-th-large" aria-hidden="true"></i></a></li>
+                                        <li><a href=""><i class="fa fa-calendar" aria-hidden="true"></i></a></li>
                                         <li><a href=""><i class="fa fa-tasks" aria-hidden="true"></i></a></li>
                                         <li><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></li>
+                                        <li><a href=""><i class="fa fa-users" aria-hidden="true"></i></a></li>
                                     </div>
                                     <div class="_n52">
-                                        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
-                                        <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                                        <li><a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+                                        <li><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
                                         <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
                                     </div>
                                 </ul>
@@ -57,12 +59,27 @@
                                 <div class="_c5x312 _c5m312 _pd3n3lr">
                                     <div class="_c5x312 _c5m312 _pd3n3lr _ta">
                                         <ul class="_ta5l3b">
-                                            <li id="btn_attend" class="_active"><i class="fa fa-book" aria-hidden="true"></i><a class=""> Attendance</a></li>
                                             <li id="btn_assign"><i class="fa fa-tasks" aria-hidden="true"></i><a> Assignment</a></li>
+                                            <li id="btn_attend" class="_active"><i class="fa fa-book" aria-hidden="true"></i><a class=""> Attendance</a></li>
                                             <li id="btn_downld"><i class="fa fa-download" aria-hidden="true"></i><a class=""> Download</a></li>
                                             <li id="btn_assist"><i class="fa fa-users" aria-hidden="true"></i><a class=""> Assistant</a></li>
                                             <li id="btn_grade"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""> Grade</a></li>
                                             <li id="#"><i class="fa fa-info-circle" aria-hidden="true"></i><a class=""> About</a></li>
+                                        </ul>
+                                        <ul class="_n">
+                                            <div class="_n51">
+                                                <li class="_n3a"><img class="_i3c" src="/img/icon/white/logo copy 4.png" alt="logo"></li>
+                                                <li><a href=""><i class="fa fa-th-large" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-calendar" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-tasks" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-users" aria-hidden="true"></i></a></li>
+                                            </div>
+                                            <div class="_n52">
+                                                <li><a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+                                            </div>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="_c5x312 _c5m312 _pd3n3lr __ass">
+                            <div class="_c5x312 _c5m312 _pd3n3lr __ass _dn">
                                 <table class="_se _se3a">
                                     <tbody>
                                         <tr>
@@ -138,175 +155,131 @@
                                 </table>
                             </div>
                             <div class="_c5x312 _c5m312 _pd3n3lr __att _dn">
-                                <div class="_se _se3a">
-                                    <div class="_ro _pd3n3b">
-                                        <div class="_c5x33 _c5m33">
-                                            <p class="_he3x3cbk _ma3l3t">Lorem Ipsum</p>
-                                            <h1 class="_ma3l3b _ma3n3t _he3cb">15</h1>
-                                        </div>
-                                        <div class="_c5x33 _c5m33">
-                                            <p class="_he3x3cbk _ma3l3t">Lorem Ipsum</p>
-                                            <h1 class="_ma3l3b _ma3n3t _he3cb">1</h1>
-                                        </div>
-                                        <div class="_c5x33 _c5m33">
-                                            <p class="_he3x3cbk _ma3l3t">Lorem Ipsum</p>
-                                            <h1 class="_ma3l3b _ma3n3t _he3cb">0</h1>
-                                        </div>
-                                        <div class="_c5x33 _c5m33">
-                                            <p class="_he3x3cbk _ma3l3t">Lorem Ipsum</p>
-                                            <h1 class=" _ma3l3b _ma3n3t _he3cb">98%</h1>
-                                        </div>
+                                <div class="_se" style="width: 100% !important;">
+                                    <div id="attendance">
                                     </div>
                                 </div>
                             </div>
                             <div class="_c5x312 _c5m312 _pd3n3lr __dow _dn">
-                                <div class="_c5x33 _c5m33 _pd3n3lr _pd3n3lr">
-                                    <div class="_se _se3a">
-                                        <div class="_ro _pd3n3b">
-                                            <div class="_c5x312 _c5m312">
-                                                <div class="_ma3n3lr">
-                                                    <img class="_i3s" src="/img/course.png" alt="" />
-                                                </div>
-                                            </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <button class="_bt5xs3b">Download</button>
                                         </div>
                                     </div>
-                                    <p class="_me3l _al3tc">Pertemuan 1</p>
                                 </div>
-                                <div class="_c5x33 _c5m33 _pd3n3lr _pd3n3lr">
-                                    <div class="_se _se3a">
-                                        <div class="_ro _pd3n3b">
-                                            <div class="_c5x312 _c5m312">
-                                                <div class="_ma3n3lr">
-                                                    <img class="_i3s" src="/img/course.png" alt="" />
-                                                </div>
-                                            </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>ALGORITMA PEMROGRAMAN</p>
+                                            <p>Friday, 25 Desemebr 2017</p>
+                                            <button class="_bt5xs3b">Download</button>
                                         </div>
                                     </div>
-                                    <p class="_me3l _al3tc">Pertemuan 2</p>
                                 </div>
-                                <div class="_c5x33 _c5m33 _pd3n3lr _pd3n3lr">
-                                    <div class="_se _se3a">
-                                        <div class="_ro _pd3n3b">
-                                            <div class="_c5x312 _c5m312">
-                                                <div class="_ma3n3lr">
-                                                    <img class="_i3s" src="/img/course.png" alt="" />
-                                                </div>
-                                            </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Mobile Computing</p>
+                                            <p>Friday, 25 Desemebr 2017</p>
+                                            <button class="_bt5xs3b">Download</button>
                                         </div>
                                     </div>
-                                    <p class="_me3l _al3tc">Pertemuan 3</p>
                                 </div>
-                                <div class="_c5x33 _c5m33 _pd3n3lr _pd3n3lr">
-                                    <div class="_se _se3a">
-                                        <div class="_ro _pd3n3b">
-                                            <div class="_c5x312 _c5m312">
-                                                <div class="_ma3n3lr">
-                                                    <img class="_i3s" src="/img/course.png" alt="" />
-                                                </div>
-                                            </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>ALGORITMA PEMROGRAMAN</p>
+                                            <p>Friday, 25 Desemebr 2017</p>
+                                            <button class="_bt5xs3b">Download</button>
                                         </div>
                                     </div>
-                                    <p class="_me3l _al3tc">Pertemuan 4</p>
+                                </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>ALGORITMA PEMROGRAMAN</p>
+                                            <p>Friday, 25 Desemebr 2017</p>
+                                            <button class="_bt5xs3b">Download</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Mobile Computing</p>
+                                            <p>Friday, 25 Desemebr 2017</p>
+                                            <button class="_bt5xs3b">Download</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="_c5x312 _c5m312 _pd3n3lr __ast _dn">
-                                <div class="_c5x312 _c5m36 _pd3n3lr _pd3n3lr">
-                                    <div class="_c5x36 _c5m36 _pd3n3lr">
-                                        <div class="_se _se3a">
-                                            <div class="_ro _pd3n3b">
-                                                <div class="_c5x312 _c5m312 _pd3n3lr _pd3n3lr">
-                                                    <div class="_ma3n3lr">
-                                                        <img class="_i3as" src="/img/course.png" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <h5 class="_ct3m _pd3m3t _bo _ma3l3t">lorem ipsum</h5>
-                                                    <p class="_ct3xs _ma3l3t _ma3n3t">Assistant</p>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-phone _ic" aria-hidden="true"></i> Lorem Ipsum</p>
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com
-                                                    </p>
-                                                    <p class="_ct3xs _el3 _ma3n3t">
-                                                        <i class="fa fa-map-marker _ic" aria-hidden="true"></i> lorem ipsum dolor sit amet.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="_c5x36 _c5m36 _pd3n3lr">
-                                        <div class="_se _se3a">
-                                            <div class="_ro _pd3n3b">
-                                                <div class="_c5x312 _c5m312 _pd3n3lr _pd3n3lr">
-                                                    <div class="_ma3n3lr">
-                                                        <img class="_i3as" src="/img/course.png" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <h5 class="_ct3m _pd3m3t _bo _ma3l3t">lorem ipsum</h5>
-                                                    <p class="_ct3xs _ma3l3t _ma3n3t">Assistant</p>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-phone _ic" aria-hidden="true"></i> Lorem Ipsum</p>
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com
-                                                    </p>
-                                                    <p class="_ct3xs _el3 _ma3n3t">
-                                                        <i class="fa fa-map-marker _ic" aria-hidden="true"></i> lorem ipsum dolor sit amet.</p>
-                                                </div>
-                                            </div>
+                            <div class="_c5x312 _c5m312 _pd3n3lr __ast">
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <p><i class="fa fa-phone _ic" aria-hidden="true"></i> +081220058838</p>
+                                            <p><i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com</p>
+                                            <p><i class="fa fa-map-marker _ic" aria-hidden="true"></i> Lab RAI</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="_c5x312 _c5m36 _pd3n3lr _pd3n3lr">
-                                    <div class="_c5x36 _c5m36 _pd3n3lr">
-                                        <div class="_se _se3a">
-                                            <div class="_ro _pd3n3b">
-                                                <div class="_c5x312 _c5m312 _pd3n3lr _pd3n3lr">
-                                                    <div class="_ma3n3lr">
-                                                        <img class="_i3as" src="/img/course.png" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <h5 class="_ct3m _pd3m3t _bo _ma3l3t">lorem ipsum</h5>
-                                                    <p class="_ct3xs _ma3l3t _ma3n3t">Assistant</p>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-phone _ic" aria-hidden="true"></i> Lorem Ipsum</p>
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com
-                                                    </p>
-                                                    <p class="_ct3xs _el3 _ma3n3t">
-                                                        <i class="fa fa-map-marker _ic" aria-hidden="true"></i> lorem ipsum dolor sit amet.</p>
-                                                </div>
-                                            </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <p><i class="fa fa-phone _ic" aria-hidden="true"></i> +081220058838</p>
+                                            <p><i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com</p>
+                                            <p><i class="fa fa-map-marker _ic" aria-hidden="true"></i> Lab RAI</p>
                                         </div>
                                     </div>
-                                    <div class="_c5x36 _c5m36 _pd3n3lr">
-                                        <div class="_se _se3a">
-                                            <div class="_ro _pd3n3b">
-                                                <div class="_c5x312 _c5m312 _pd3n3lr _pd3n3lr">
-                                                    <div class="_ma3n3lr">
-                                                        <img class="_i3as" src="/img/course.png" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <h5 class="_ct3m _pd3m3t _bo _ma3l3t">lorem ipsum</h5>
-                                                    <p class="_ct3xs _ma3l3t _ma3n3t">Assistant</p>
-                                                </div>
-                                                <div class="_c5x312 _c5m312">
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-phone _ic" aria-hidden="true"></i> Lorem Ipsum</p>
-                                                    <p class="_ct3xs _el3 _ma3l3t _ma3n3t">
-                                                        <i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com
-                                                    </p>
-                                                    <p class="_ct3xs _el3 _ma3n3t">
-                                                        <i class="fa fa-map-marker _ic" aria-hidden="true"></i> lorem ipsum dolor sit amet.</p>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <p><i class="fa fa-phone _ic" aria-hidden="true"></i> +081220058838</p>
+                                            <p><i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com</p>
+                                            <p><i class="fa fa-map-marker _ic" aria-hidden="true"></i> Lab RAI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <p><i class="fa fa-phone _ic" aria-hidden="true"></i> +081220058838</p>
+                                            <p><i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com</p>
+                                            <p><i class="fa fa-map-marker _ic" aria-hidden="true"></i> Lab RAI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_c5x312 _c5m34 _pd3n3lr3x">
+                                    <div class="_se3lc ">
+                                        <div>
+                                            <img src="/img/image.png" alt="">
+                                            <p>Asep Nur Muhammad</p>
+                                            <p>Asistan Pemrograman Web</p>
+                                            <p><i class="fa fa-phone _ic" aria-hidden="true"></i> +081220058838</p>
+                                            <p><i class="fa fa-envelope-o _ic" aria-hidden="true"></i> Loremipsum@gmail.com</p>
+                                            <p><i class="fa fa-map-marker _ic" aria-hidden="true"></i> Lab RAI</p>
                                         </div>
                                     </div>
                                 </div>
@@ -396,8 +369,47 @@
         </div>
         <!-- _bl -->
     </div>
-    <!-- inject:js -->
-    <!-- endinject -->
+    <script>
+        // Load google charts
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'x'],
+                ['PRESENT', 1],
+                ['SICK', 4],
+                ['ABSENT', 5],
+                ['PERMISSION', 1],
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = {
+                'title': '',
+                'width': 270,
+                'height': 270,
+                'chartArea': {
+                    left: 10,
+                    right: 10, // !!! works !!!
+                    bottom: 20, // !!! works !!!
+                    top: 20,
+                    width: "100%",
+                    height: "100%",
+                },
+                'legend': {
+                    'position': 'bottom',
+                }
+
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('attendance'));
+            chart.draw(data, options);
+        }
+    </script>
 </body>
 
 </html>

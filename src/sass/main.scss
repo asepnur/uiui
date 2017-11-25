@@ -11,7 +11,7 @@
 html,
 body {
     height: 100%;
-    max-width: 1500px;
+    max-width: 20000px;
 }
 
 body {
@@ -736,8 +736,17 @@ input:checked+.slider:before {
     height: auto;
     background-color: $hx-white;
     div {
-        padding: 15px 25px;
+        padding: 15px 15px;
+        img {
+            width: 100%;
+            height: 90px;
+            overflow: hidden;
+            object-fit: cover;
+            display: block;
+            border-radius: 2px;
+        }
         p {
+            margin: 2px;
             &:first-child {
                 color: rgba($hx-black, 1);
                 font-weight: bold;
@@ -1414,4 +1423,11 @@ input:checked+.slider:before {
         color: $_blue !important;
         font-weight: bold;
     }
+}
+
+#attendance {
+    width: auto;
+    margin: 0 auto !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
 }
