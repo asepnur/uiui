@@ -14,12 +14,14 @@ $(document).ready(() => {
     $(".__dow").hide();
     $(".__ast").hide();
     $(".__grd").hide();
+    $(".__abt").hide();
     $("#btn_assign").click(() => {
         $(".__ass").show(0);
         $(".__att").hide();
         $(".__dow").hide();
         $(".__ast").hide();
         $(".__grd").hide();
+        $(".__abt").hide();
     });
     $("#btn_attend").click(() => {
         $(".__ass").hide();
@@ -27,6 +29,7 @@ $(document).ready(() => {
         $(".__dow").hide();
         $(".__ast").hide();
         $(".__grd").hide();
+        $(".__abt").hide();
     });
     $("#btn_downld").click(() => {
         $(".__ass").hide();
@@ -34,6 +37,7 @@ $(document).ready(() => {
         $(".__dow").show();
         $(".__ast").hide();
         $(".__grd").hide();
+        $(".__abt").hide();
     });
     $("#btn_assist").click(() => {
         $(".__ass").hide();
@@ -41,6 +45,7 @@ $(document).ready(() => {
         $(".__dow").hide();
         $(".__ast").show();
         $(".__grd").hide();
+        $(".__abt").hide();
     });
     $("#btn_grade").click(() => {
         $(".__ass").hide();
@@ -48,6 +53,15 @@ $(document).ready(() => {
         $(".__dow").hide();
         $(".__ast").hide();
         $(".__grd").show();
+        $(".__abt").hide();
+    });
+    $("#btn_about").click(() => {
+        $(".__ass").hide();
+        $(".__att").hide();
+        $(".__dow").hide();
+        $(".__ast").hide();
+        $(".__grd").hide();
+        $(".__abt").show();
     });
 });
 
