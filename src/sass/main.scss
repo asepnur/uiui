@@ -152,6 +152,8 @@ input[type="checkbox"] {
 
 ._d5ab {
     @extend ._d;
+    font-size: 0.8em;
+    color: $hx_black .5;
     text-align: left;
 }
 
@@ -858,6 +860,80 @@ input:checked+.slider:before {
     }
 }
 
+._se3o {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    width: 100%;
+    font-size: 1em;
+    thead {
+        padding: 5px;
+        background-color: $_main;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            th {
+                @extend ._ct;
+                color: $hx-white;
+                font-weight: bold;
+                background-color: $_main;
+                padding: 10px;
+                font-size: 1em;
+                @include flex(2);
+                @include flex-box();
+                @include justify-content(center);
+                @include align-items(center);
+            }
+        }
+    }
+    tbody {
+        tr {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            td {
+                @extend ._ct;
+                font-size: 1.6em;
+                text-align: center;
+                color: $hx-black;
+                padding: 10px;
+                @include flex(2);
+                @include flex-box();
+                @include justify-content(center);
+                @include align-items(center);
+            }
+        }
+    }
+}
+
+._se3g {
+    @extend ._se3o;
+    tbody {
+        tr {
+            &:nth-child(2n) {
+                background-color: $_4grey;
+            }
+            td {
+                font-size: 1em;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 ._se {
     position: relative;
     border-radius: 5px;
@@ -1043,6 +1119,26 @@ input:checked+.slider:before {
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+            }
+        }
+    }
+}
+
+._se3inf3w {
+    @extend ._se3inf;
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            border-bottom: none;
+            &:first-child {
+                border-top: none;
+            }
+            &:last-child {
+                border-bottom: 1px solid $hx-silver;
             }
         }
     }
@@ -1386,6 +1482,12 @@ input:checked+.slider:before {
             a {
                 display: none;
             }
+        }
+    }
+    ._ta5l3w {
+        @extend ._ta5l;
+        ._active {
+            background-color: $hx_white;
         }
     }
     ._ta5lh {

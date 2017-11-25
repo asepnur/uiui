@@ -1,5 +1,6 @@
 @import 'variable';
 @import 'typography';
+@import 'mixin';
 ._tb {
     display: -webkit-box;
     display: -moz-box;
@@ -15,6 +16,9 @@
     border-collapse: separate;
     justify-content: space-between;
     width: 100%;
+    tr {
+        width: 100%;
+    }
     th {
         @extend ._ct;
         color: $hx-white;
@@ -129,3 +133,5 @@
         width: 27.5%;
     }
 }
+
+._tb3b35 {}
