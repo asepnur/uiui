@@ -11,9 +11,10 @@
 // --------------------------------------------------
 @mixin flex-box() {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -webkit-flexbox;
     display: -moz-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
 }
 

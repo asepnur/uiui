@@ -371,7 +371,8 @@ input[type="checkbox"] {
             }
         }
     }
-    ._se {
+    ._se,
+    ._se3a {
         font-size: 1.2em !important;
     }
     ._se3inf {
@@ -806,23 +807,6 @@ input:checked+.slider:before {
     }
 }
 
-._se3a {
-    background-color: $hx-white;
-}
-
-._se3b {
-    background-color: $_2grey;
-}
-
-._se3s {
-    background-color: $hx-white;
-}
-
-._se3n {
-    box-shadow: none;
-    background-color: $_1grey;
-}
-
 ._se3a3n3lr {
     background-color: $hx-white;
     margin: 15px 0px 15px 0px;
@@ -943,7 +927,7 @@ input:checked+.slider:before {
     }
 }
 
-._se {
+._se3a {
     position: relative;
     border-radius: 5px;
     box-shadow: 0.5px 0.5px 1px $hx-silver;
@@ -953,7 +937,7 @@ input:checked+.slider:before {
     background-color: $hx-white;
     @include flex-box();
     @include flex-direction(column);
-    width: 100%;
+    max-width: 100%;
     font-size: 1em;
     thead {
         padding: 5px;
@@ -971,28 +955,34 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
-            &:nth-child(2n) {
-                background-color: $_4grey;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid $hx-silver;
+            &:last-child {
+                border-bottom: none;
             }
             td {
-                //max-height: 50px;
                 padding: 5px;
                 &:nth-child(1) {
+                    max-width: 30px;
                     @include flex(1);
                 }
                 &:nth-child(2) {
+                    max-width: 220px;
                     @include flex(2);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 &:nth-child(3) {
+                    max-width: 600px;
                     @include flex(7);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 &:nth-child(4) {
+                    text-align: center;
                     @include flex(2);
                     @include flex-box();
                     @include justify-content(center);
@@ -1061,8 +1051,10 @@ input:checked+.slider:before {
     margin-left: 0px;
     margin-right: 0px;
     background-color: $_1grey;
+    box-sizing: border-box;
     @include flex-box();
     @include flex-direction(column);
+    @include flex-wrap(wrap);
     width: 100%;
     font-size: 1em;
     thead {
@@ -1081,6 +1073,7 @@ input:checked+.slider:before {
             @include flex-direction(row);
             @include justify-content(center);
             @include align-items(center);
+            width: 100%;
             padding: 5px;
             border-bottom: 1px solid $hx_silver;
             &:first-child {
@@ -1090,6 +1083,7 @@ input:checked+.slider:before {
                 border-bottom: 1px solid $hx-silver;
             }
             td {
+                display: block;
                 p {
                     margin: 0;
                     &:first-child {
@@ -1097,6 +1091,7 @@ input:checked+.slider:before {
                         font-size: 1em;
                     }
                     &:nth-child(2) {
+                        max-width: 350px;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         font-size: .9em;
@@ -1114,9 +1109,12 @@ input:checked+.slider:before {
                 //max-height: 50px;
                 padding: 5px;
                 &:nth-child(1) {
+                    max-width: 80px;
                     @include flex(2);
+                    @include flex-basis(20px);
                 }
                 &:nth-child(2) {
+                    @include flex-basis(30px);
                     @include flex(8);
                     white-space: nowrap;
                     overflow: hidden;
@@ -1180,25 +1178,29 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
-            &:nth-child(2n) {
-                background-color: $_4grey;
-            }
+            border-bottom: 1px solid $hx-silver;
+            margin-left: 5px;
+            margin-right: 5px;
             td {
                 //max-height: 50px;
                 padding: 5px;
                 &:nth-child(1) {
+                    max-width: 100px;
                     @include flex(3);
                 }
                 &:nth-child(2) {
+                    max-width: 150px;
                     @include flex(3);
                 }
                 &:nth-child(3) {
+                    max-width: 600px;
                     @include flex(4);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 &:nth-child(4) {
+                    text-align: center;
                     @include flex(2);
                     @include flex-box();
                     @include justify-content(center);
