@@ -486,6 +486,13 @@
     font-size: 1em;
 }
 
+._ct3nor {
+    // medium black
+    @extend ._ct;
+    color: $hx-black;
+    font-size: 1.2em;
+}
+
 // display
 ._dn {
     display: none;
