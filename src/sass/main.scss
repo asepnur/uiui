@@ -853,6 +853,14 @@ input:checked+.slider:before {
     }
 }
 
+._se3da {
+    position: relative;
+    background-color: $hx-white;
+    margin: 15px 0px;
+    @include flex-box();
+    @include flex-direction(column);
+}
+
 ._se3o {
     position: relative;
     border-radius: 5px;
