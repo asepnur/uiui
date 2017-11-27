@@ -955,8 +955,8 @@ input:checked+.slider:before {
             @include justify-content(center);
             @include align-items(center);
             padding: 5px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 15px;
+            margin-right: 15px;
             border-bottom: 1px solid $hx-silver;
             &:last-child {
                 border-bottom: none;
@@ -968,22 +968,35 @@ input:checked+.slider:before {
                     @include flex(1);
                 }
                 &:nth-child(2) {
-                    max-width: 220px;
+                    font-weight: bold;
+                    max-width: 120px;
                     @include flex(2);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 &:nth-child(3) {
-                    max-width: 600px;
+                    p {
+                        margin: 0;
+                        max-width: 600px;
+                    }
                     @include flex(7);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 &:nth-child(4) {
+                    max-width: 50px;
                     text-align: center;
-                    @include flex(2);
+                    @include flex(1);
+                    @include flex-box();
+                    @include justify-content(center);
+                    @include align-items(center);
+                }
+                &:nth-child(5) {
+                    max-width: 50px;
+                    text-align: center;
+                    @include flex(1);
                     @include flex-box();
                     @include justify-content(center);
                     @include align-items(center);
@@ -1027,21 +1040,6 @@ input:checked+.slider:before {
                 @include justify-content(center);
             }
         }
-    }
-    ._se5t {
-        font-size: .9em;
-    }
-    ._se5ct {
-        font-size: .9em;
-    }
-    ._se5c {
-        font-size: .9em;
-    }
-    ._se5m {
-        font-size: .9em;
-    }
-    ._se5xl {
-        font-size: 1.5em;
     }
 }
 
@@ -1179,50 +1177,44 @@ input:checked+.slider:before {
             @include align-items(center);
             padding: 5px;
             border-bottom: 1px solid $hx-silver;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            &:last-child {
+                border-bottom: none;
+            }
             td {
-                //max-height: 50px;
+                p {
+                    span {
+                        font-size: .9em;
+                        color: $hx-silver;
+                    }
+                    margin: 0;
+                    &:first-child {
+                        font-size: 1.3em;
+                        color: $_main;
+                    }
+                    &:nth-child(2) {
+                        margin-top: 5px;
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: $hx-black;
+                    }
+                    &:nth-child(3) {
+                        font-size: .9em;
+                        color: $hx-black;
+                    }
+                }
                 padding: 5px;
                 &:nth-child(1) {
-                    max-width: 100px;
-                    @include flex(3);
+                    @include flex(2);
                 }
                 &:nth-child(2) {
-                    max-width: 150px;
-                    @include flex(3);
-                }
-                &:nth-child(3) {
-                    max-width: 600px;
-                    @include flex(4);
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                &:nth-child(4) {
+                    max-width: 50px;
                     text-align: center;
-                    @include flex(2);
-                    @include flex-box();
-                    @include justify-content(center);
-                    @include align-items(center);
+                    @include flex(1);
                 }
             }
         }
-    }
-    ._se5t {
-        font-size: .9em;
-    }
-    ._se5ct {
-        font-size: .9em;
-    }
-    ._se5c {
-        font-size: .9em;
-    }
-    ._se5m {
-        font-size: .9em;
-    }
-    ._se5xl {
-        font-size: 1.5em;
     }
 }
 
