@@ -869,6 +869,59 @@ input:checked+.slider:before {
     @include flex-direction(column);
 }
 
+._se3msg3l {
+    @extend ._se3msg;
+    padding: 150px 30px 150px 30px !important;
+    box-shadow: none !important;
+    background-color: $_1grey !important;
+}
+
+._se3msg {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 35px 0px 35px 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    max-width: 100%;
+    ._head {
+        font-size: 1.6em;
+        color: $hx_silver !important;
+        font-weight: bold;
+    }
+    ._main {
+        font-size: 1em !important;
+        color: $hx_silver;
+    }
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            td {
+                @extend ._ct;
+                text-align: center;
+                @include flex(1);
+                @include flex-box();
+                @include justify-content(center);
+                @include align-items(center);
+                i {
+                    font-size: 5em;
+                    color: $hx_silver;
+                }
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
 ._se3o {
     position: relative;
     border-radius: 5px;
