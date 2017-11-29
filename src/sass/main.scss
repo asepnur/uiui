@@ -486,8 +486,7 @@ input[type="checkbox"] {
     }
     ._md5cu {
         padding: 0 50px 50px 50px;
-        input[type="text"] {}
-        ._md5i {
+        input[type="text"] ._md5i {
             padding-top: 50px;
             padding-bottom: 50px;
             margin-top: 30px;
@@ -1164,7 +1163,6 @@ input:checked+.slider:before {
                 @include flex-box();
                 @include flex-direction(row);
                 justify-content: flex-start;
-                td {}
             }
             &:last-child {
                 @include flex(1);
