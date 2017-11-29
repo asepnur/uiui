@@ -6,6 +6,20 @@
 }
 
 // --------------------------------------------------
+// Line-Clamp
+//
+// --------------------------------------------------
+@mixin line-clamp($values) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -webkit-flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-line-clamp: $values;
+    -webkit-box-orient: vertical;
+}
+
+// --------------------------------------------------
 // Flexbox SASS mixins
 // 
 // --------------------------------------------------
