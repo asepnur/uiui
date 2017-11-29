@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $(".__wr").click(() => {
+        console.log('sasas')
         $("._md").css("display", "block");
     });
     $('.__x').click(() => {
@@ -195,54 +196,54 @@ Array.prototype.slice.call(buttons).forEach(function(button) {
 
 // home screen
 
-var current = 0;
-var rotator_obj = null;
+// var current = 0;
+// var rotator_obj = null;
 
-var images_array = new Array();
-images_array[0] = "rotator_1";
-images_array[1] = "rotator_2";
-images_array[2] = "rotator_3";
+// var images_array = new Array();
+// images_array[0] = "rotator_1";
+// images_array[1] = "rotator_2";
+// images_array[2] = "rotator_3";
 
-var rotate_them = setInterval(function() { rotating() }, 1000);
+// var rotate_them = setInterval(function() { rotating() }, 1000);
 
-function rotating() {
+// function rotating() {
 
-    rotator_obj = document.getElementById(images_array[current]);
+//     rotator_obj = document.getElementById(images_array[current]);
 
-    if (current != 0) {
+//     if (current != 0) {
 
-        var rotator_obj_pass = document.getElementById(images_array[current - 1]);
-        rotator_obj_pass.style.left = "-320px";
+//         var rotator_obj_pass = document.getElementById(images_array[current - 1]);
+//         rotator_obj_pass.style.left = "-320px";
 
-    } else {
+//     } else {
 
-        rotator_obj.style.left = "-320px";
+//         rotator_obj.style.left = "-320px";
 
-    }
+//     }
 
-    var slideit = setInterval(function() { change_position(rotator_obj) }, 30);
+//     var slideit = setInterval(function() { change_position(rotator_obj) }, 30);
 
-    current++;
+//     current++;
 
-    if (current == images_array.length + 1) {
+//     if (current == images_array.length + 1) {
 
-        var rotator_obj_passed = document.getElementById(images_array[current - 2]);
-        rotator_obj_passed.style.left = "-320px";
-        current = 0;
-        rotating();
+//         var rotator_obj_passed = document.getElementById(images_array[current - 2]);
+//         rotator_obj_passed.style.left = "-320px";
+//         current = 0;
+//         rotating();
 
-    }
+//     }
 
-}
+// }
 
-function change_position(rotator_obj, type) {
+// function change_position(rotator_obj, type) {
 
-    var intleft = parseInt(rotator_obj.style.left);
+//     var intleft = parseInt(rotator_obj.style.left);
 
-    if (intleft != 0) {
+//     if (intleft != 0) {
 
-        rotator_obj.style.left = intleft + 32 + "px";
+//         rotator_obj.style.left = intleft + 32 + "px";
 
-    }
+//     }
 
-}
+// }
