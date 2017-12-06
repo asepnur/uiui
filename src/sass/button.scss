@@ -134,3 +134,39 @@
     font-weight: 100;
     margin: 0;
 }
+
+._bt5xs3r {
+    @extend ._bt3r;
+    border-radius: 3px;
+    font-family: "Helvetica";
+    border: none;
+    padding: 5px 5px !important;
+    color: #FFFFFF;
+    width: 75px !important;
+    font-weight: 100;
+    margin: 0;
+}
+
+._bt5xs3g {
+    @extend ._bt3g;
+    border-radius: 3px;
+    font-family: "Helvetica";
+    border: none;
+    padding: 5px 5px !important;
+    color: #FFFFFF;
+    width: 75px !important;
+    font-weight: 100;
+    margin: 0;
+}
+
+._bt5xs3m {
+    @extend ._bt3m;
+    border-radius: 3px;
+    font-family: "Helvetica";
+    border: none;
+    padding: 5px 5px !important;
+    color: #FFFFFF;
+    width: 75px !important;
+    font-weight: 100;
+    margin: 0;
+}
