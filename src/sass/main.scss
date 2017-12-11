@@ -1276,17 +1276,21 @@ input:checked+.slider:before {
                     }
                 }
             }
+            &:last-child {
+                border-bottom: 1px solid $hx-silver;
+            }
         }
     }
     tfoot {
-        background-color: $_1grey;
+        background-color: $hx-white;
         width: 100%;
+        height: auto;
         @include flex-box();
         @include flex-direction(row);
         @include justify-content(center);
         tr {
-            margin: 5px;
-            padding: 5px;
+            margin-top: 30px;
+            @include flex(1);
             @include flex-box();
             @include justify-content(center);
             td {
