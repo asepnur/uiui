@@ -117,12 +117,6 @@
     padding-bottom: 15px;
 }
 
-._pd3l3lr {
-    // padding large default left & right
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 ._pd3l3a {
     // padding large default all
     padding: 15px;
@@ -526,6 +520,11 @@
         // padding spesial content left
         padding-left: 80px;
     }
+    ._pd3l3lr {
+        // padding none large default left & right
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -534,9 +533,10 @@
         //margin top content
         margin-top: 40px;
     }
-    ._pd3n3lr3x {
+    ._pd3n3lr3x,
+    ._pd3l3lr {
         // padding none large default left & right
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
 }
