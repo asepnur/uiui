@@ -49,50 +49,77 @@
                                 <div class="_pd3n3lr _ta">
                                     <ul class="_ta5p">
                                         <li><a href="">Home</a></li>
-                                        <li class="_active"><a href="">Mobile Computing</a></li>
+                                        <li class="_active"><a href="">Users List</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="_c5x312 _c5m32 _pd3l3t _pd3n3lr">
                                 <div class="_ta">
                                     <ul class="_ta5ad">
-                                        <li id="btn_assign"><i class="fa fa-tasks" aria-hidden="true"></i><a> Assignment</a></li>
-                                        <li id="btn_attend"><i class="fa fa-book" aria-hidden="true"></i><a class=""> Attendance</a></li>
-                                        <li id="btn_downld"><i class="fa fa-folder-open-o" aria-hidden="true"></i><a class=""> Tutorial File</a></li>
-                                        <li id="btn_student"><i class="fa fa-users" aria-hidden="true"></i><a class=""> Assistant & Student</a></li>
-                                        <li id="btn_grade"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""> Grade</a></li>
-                                        <li id="btn_about" class="_active"><i class="fa fa-question-circle" aria-hidden="true"></i><a class=""> About</a></li>
+                                        <li id="btn_users"><i class="fa fa-users" aria-hidden="true"></i><a> Users List</a></li>
+                                        <li id="btn_add" class="_active"><i class="fa fa-plus-circle" aria-hidden="true"></i><a class=""> Create</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="_c5x312 _c5m310  _pd3l3lr">
                                 <div class="_ca">
                                     <div class="_ca3h">
-                                        <div class="_c5m310 _c5x310">About</div>
+                                        <div class="_c5m310 _c5x310">Create Users</div>
                                     </div>
                                     <div class="_se">
-                                        <div class="_c5x312 _c5m312">
-                                            <label for="name">Course Name</label>
-                                            <input name="name" type="text">
-                                        </div>
-                                        <div class="_c5x36 _c5m36">
-                                            <label for="course_name">Semester</label>
-                                            <input name="due" type="text">
-                                        </div>
-                                        <div class="_c5x36 _c5m36">
-                                            <label for="course_name">Status</label>
-                                            <select>
-                                                    <option value="lorem1">Active</option>
-                                                    <option value="lorem2">InActive</option>
-                                                </select>
-                                        </div>
-                                        <div class="_c5x312 _c5m312">
-                                            <label for="description">Description*</label>
-                                            <textarea placeholder="input description"></textarea>
-                                        </div>
-                                        <div class="_c5m3o10 _c5x3o9 _c5x33 _c5m32 _pd3l">
-                                            <button type="button" class="_bt5m3b">Update</button>
-                                        </div>
+                                        <form action="/" method="POST">
+                                            <div class="_ro">
+                                                <div class="_c5m312 _c5x312">
+
+                                                    <label for="name">User Name*</label>
+                                                    <input type="text" name="uName" />
+                                                </div>
+                                                <div class="_c5m312 _c5x312">
+
+                                                    <label for="name">NPM*</label>
+                                                    <input type="text" name="id" />
+                                                </div>
+                                                <div class="_c5m36 _c5x312">
+
+                                                    <label for="name">Password*</label>
+                                                    <input type="password" name="pass" />
+                                                </div>
+                                                <div class="_c5m36 _c5x312">
+
+                                                    <label for="name">Passwork Confirm*</label>
+                                                    <input type="password" name="passConf" />
+                                                </div>
+                                                <div class="_c5m36 _c5x312">
+
+                                                    <label for="name">Status</label>
+                                                    <Select>
+                                                        <option value="active">Active</option>
+                                                        <option value="deactive">Deactive</option>
+                                                    </select>
+                                                </div>
+                                                <div class="_c5m36 _c5x312">
+
+                                                    <label for="name">Role</label>
+                                                    <select>
+                                                        <option value="lorem1">Lorem1</option>
+                                                        <option value="lorem2">lorem2</option>
+                                                        <option value="lorem3">Lorem3</option>
+                                                        <option value="lorem4">lorem4</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="_se">
+
+                                    <div class="_c5m3o8 _c5x3o6 _c5x33 _c5m32 _pd3r">
+                                        <button type="button" class="_bt5m">Back</button>
+                                    </div>
+                                    <div class="_c5x33 _c5m32 _pd3l">
+                                        <button type="button" class="_bt5m3b">Save</button>
                                     </div>
                                 </div>
                             </div>
