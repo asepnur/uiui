@@ -148,48 +148,66 @@
     font-size: 1em;
     border: .2px solid $hx-silver !important;
     thead {
+        @include flex(1);
         padding: 5px;
-        background-color: $_main !important;
         tr {
+            @include flex-box();
+            @include flex-direction(row);
+            padding: 5px;
+            border-bottom: 1px solid $hx-silver;
+            &:first-child {
+                @include justify-content(center);
+                border-bottom: none;
+                background-color: $hx-silver !important;
+                th {
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
             th {
-                color: $hx-white;
-                text-align: center !important;
-                font-size: 1.2em;
-                padding: 20px;
+                padding: 4px;
+                color: $hx-black;
+                font-weight: normal;
+                text-align: left;
+                &:last-child {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
         }
     }
     tbody {
+        @include flex(1);
+        padding: 5px;
         tr {
             @include flex-box();
             @include flex-direction(row);
-            @include justify-content(center);
-            @include align-items(center);
-            padding: 8px 5px;
-            margin-left: 15px;
-            margin-right: 15px;
-            border-bottom: .5px solid $hx-silver;
-            td {
-                &:first-child {
-                    @include flex(2);
-                    text-align: right;
+            padding: 5px;
+            border-bottom: 1px solid $hx-silver;
+            &:first-child {
+                @include justify-content(center);
+                border-bottom: none;
+                background-color: $hx-silver !important;
+                td {
+                    text-align: center;
+                    font-weight: bold;
                 }
+            }
+            td {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: 4px;
+                color: $hx-black;
+                font-weight: normal;
                 &:last-child {
                     max-width: 100% !important;
                     @include flex(4);
-                    margin-left: 5px;
                 }
             }
             &:last-child {
                 border-bottom: none;
-            }
-            &:first-child {
-                td {
-                    text-align: center;
-                }
-                font-size: 2.5em;
-                color: $_main;
-                font-weight: bold;
             }
             &:last-child {
                 td {
