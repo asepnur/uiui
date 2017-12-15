@@ -1147,6 +1147,8 @@ input:checked+.slider:before {
 
 ._ca {
     margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
     display: inline-block;
     background-color: $hx-white;
@@ -1194,6 +1196,124 @@ input:checked+.slider:before {
                         color: $_blue;
                     }
                 }
+            }
+        }
+    }
+    ._ca3h3b {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        div {
+            padding-top: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        ._tittle {
+            margin-top: 15px;
+            font-size: 1.8em;
+            padding-left: 15px;
+            font-weight: bold;
+            color: $_blue;
+        }
+        ._icon {
+            margin-top: 15px;
+            text-align: right;
+            color: $_blue;
+            font-size: 2em;
+            cursor: pointer;
+            &:hover {
+                color: $_hblue;
+            }
+        }
+    }
+}
+
+._se3adu {
+    @extend ._se3ada;
+    thead {
+        tr {
+            th {}
+        }
+    }
+    tbody {
+        tr {
+            td {}
+        }
+    }
+}
+
+._se3att {
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: $hx-white;
+    @include flex-box();
+    @include flex-direction(column);
+    max-width: 100%;
+    font-size: 1em;
+    thead {
+        padding: 5px;
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-bottom: 1px solid $hx-silver;
+            th {
+                @include flex(1);
+                text-align: left;
+                font-size: 1.2em;
+                padding: 5px;
+                font-weight: normal;
+                &:first-child {
+                    width: 10%;
+                }
+                &:last-child {
+                    @include flex-box();
+                    @include justify-content(center);
+                }
+            }
+            border-top: 1px solid $hx-silver;
+            border-bottom: 1px solid $hx-silver;
+        }
+    }
+    tbody {
+        tr {
+            @include flex-box();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-bottom: 1px solid $hx-silver;
+            &:last-child {
+                border-bottom: none;
+            }
+            td {
+                @include flex(1);
+                padding: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &:nth-child(1) {
+                    width: 10% !important;
+                }
+                &:last-child {
+                    text-align: center;
+                    @include flex-box();
+                    @include justify-content(center);
+                    @include align-items(center);
+                }
+            }
+            &:last-child {
+                border-bottom: 1px solid $hx-silver;
             }
         }
     }
