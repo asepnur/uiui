@@ -25,6 +25,8 @@ table {
 select,
 input[type="text"],
 input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="password"] {
     border-radius: 3px;
     border: .5px solid rgba($rgb-silver, .5);
@@ -35,13 +37,23 @@ input[type="password"] {
     width: 100%;
     font-size: 1em;
     font-weight: normal;
+    height: 40px;
+    max-height: 40px;
+    cursor: pointer;
 }
 
 select:focus,
 input[type="checkbox"]:focus,
 input[type="text"]:focus,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="password"]:focus {
     border: .5px solid rgba($rgb-silver, 1);
+}
+
+._desc {
+    min-height: 300px;
 }
 
 ._att {
@@ -63,11 +75,6 @@ textarea {
     height: 420px;
     resize: vertical;
     overflow: auto;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
 }
 
 // Header Class 
@@ -124,6 +131,7 @@ input[type="checkbox"] {
     @extend ._he3n;
     font-size: 1.6em;
     color: $_blue;
+    margin-top: 15px;
 }
 
 ._he3p {
@@ -778,6 +786,21 @@ input:checked+.slider:before {
     ._active:hover {
         background-color: $_main;
     }
+    button {
+        outline: none;
+        border: none;
+        color: #000000;
+        float: left;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            background-color: #e6e6e6;
+        }
+    }
 }
 
 // List course
@@ -797,13 +820,13 @@ input:checked+.slider:before {
             width: 100%;
             height: 90px;
             overflow: hidden;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
             border-radius: 2px;
         }
         p {
             margin: 2px;
-            &:first-child {
+            &:nth-child(2) {
                 color: rgba($hx-black, 1);
                 font-weight: bold;
             }
@@ -947,7 +970,7 @@ input:checked+.slider:before {
 ._se3usr {
     position: relative;
     background-color: $hx-white;
-    margin: 15px 0px;
+    margin: 50px 0px;
     display: inline-block;
     width: 100%;
 }
@@ -1016,7 +1039,7 @@ input:checked+.slider:before {
 ._se3o {
     position: relative;
     border-radius: 5px;
-    box-shadow: 0.5px 0.5px 1px $hx-silver;
+    box-shadow: 0.5px 0.5px 1px $_1grey;
     margin: 15px;
     margin-left: 0px;
     margin-right: 0px;
@@ -1027,7 +1050,7 @@ input:checked+.slider:before {
     font-size: 1em;
     thead {
         padding: 5px;
-        background-color: $_main;
+        background-color: $_blue;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         tr {
@@ -1039,7 +1062,7 @@ input:checked+.slider:before {
                 @extend ._ct;
                 color: $hx-white;
                 font-weight: bold;
-                background-color: $_main;
+                background-color: $_blue;
                 padding: 10px;
                 font-size: 1em;
                 @include flex(2);
@@ -1059,7 +1082,7 @@ input:checked+.slider:before {
             @include align-items(center);
             td {
                 @extend ._ct;
-                font-size: 1.6em;
+                font-size: 1.1em;
                 text-align: center;
                 color: $hx-black;
                 padding: 10px;
@@ -1149,6 +1172,8 @@ input:checked+.slider:before {
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     position: relative;
     display: inline-block;
     background-color: $hx-white;
@@ -1997,7 +2022,9 @@ input:checked+.slider:before {
                 }
                 a {
                     color: rgba($rgb-black, .5);
-                    display: none;
+                    &:last-child {
+                        display: none;
+                    }
                 }
                 i {
                     color: rgba($rgb-black, .5);
@@ -2155,16 +2182,169 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
+._upl {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    border: 1px dashed $_blue;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    ._upl3up {
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        input {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        p {
+            cursor: pointer;
+            &:nth-child(2) {
+                margin-top: 10px;
+            }
+            i {
+                font-size: 3em;
+                text-align: center;
+                color: $_blue;
+            }
+            text-align: center;
+            color: $_blue;
+            font-size: 1em;
+            margin:0;
+        }
+    }
+    ._sbmtd3c {
+        ul {
+            width: auto;
+            @include flex-box();
+            @include flex-direction(row);
+            border-bottom: 1px solid $_blue;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0;
+            li {
+                &:first-child {
+                    max-width: 2em;
+                    @include flex(1);
+                }
+                &:nth-child(2) {
+                    @include flex(4);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-left: 3px;
+                    margin-right: 3px;
+                }
+                &:nth-child(3) {
+                    @include flex(1);
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    max-width: 80px;
+                }
+                &:nth-child(4) {
+                    i {
+                        color: $hx-green;
+                        font-weight: bold;
+                        text-align: left;
+                    }
+                    @include flex(1);
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    max-width: 80px;
+                }
+                &:last-child {
+                    text-align: right;
+                    @include flex(1);
+                    max-width: 20px;
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    i {
+                        cursor: pointer;
+                    }
+                }
+            }
+            img {
+                width: 1em;
+            }
+            list-style-type: none;
+        }
+    }
+}
+
+._dr {
+    position: relative;
+    ._cbx {
+        border: 1px solid #C0C0C0;
+        position: relative;
+        display: inline-box;
+        padding: 0;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        height: 40px;
+        max-height: 40px;
+        border-radius: 3px;
+        li {
+            padding: 10px 14px;
+            border-radius: 11px;
+            cursor: pointer;
+            margin: 0;
+            list-style-type: none;
+            i {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+        }
+    }
+    ._cbx3c {
+        position: absolute;
+        border: 1px solid $hx-silver;
+        display: none;
+        padding: 0;
+        max-height: 95px;
+        overflow-y: scroll;
+        margin-top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0.5px 0.5px 2px $hx-white;
+        background: $hx-white;
+        z-index: 10;
+        input {
+            cursor: pointer;
+            width: 20px;
+            height: 15px;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+        li {
+            position: relative;
+            padding-left: 25px;
+            list-style-type: none;
+            margin: 5px 10px;
+        }
+    }
+}
+
 // Modal 
 ._md {
-    padding: 30px;
+    padding: 15px;
     display: none;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 101;
     background-color: rgba($rgb-black, .5);
     ._md5inf {
         background-color: $hx_white;
@@ -2227,6 +2407,38 @@ input:checked+.slider:before {
             padding-bottom: 15px;
             margin-top: 15px;
             margin-bottom: 15px;
+            ._md5i5f {
+                position: relative;
+                width: auto;
+                display: inline;
+                margin: 15px;
+                img {
+                    position: relative;
+                    width: 60px;
+                    height: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    display: block;
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                button {
+                    display: block;
+                    padding-top: none;
+                    background-color: $hx-red;
+                    color: $hx-white;
+                    outline: none;
+                    border: none;
+                    &:hover {
+                        background-color: $hhx-red;
+                    }
+                }
+            }
             input[type="file"] {
                 opacity: 0;
                 position: absolute;
@@ -2248,6 +2460,36 @@ input:checked+.slider:before {
         padding-top: 15px;
         hr {
             margin: 10px 5px 5px 5px;
+        }
+    }
+}
+
+._md5d {
+    padding: 15px;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    ._md5cu {
+        background-color: $_dblue;
+        box-shadow: 1px 1px 1px $hx-white;
+        z-index: 100;
+        border-radius: 5px;
+        margin-top: 10%;
+        margin-bottom: auto;
+        padding-bottom: 15px;
+        height: auto;
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid $hx-silver;
+            border-radius: 0px;
+            padding: 0px;
+            &:focus {
+                border-bottom: 3px solid $_blue;
+            }
         }
     }
 }

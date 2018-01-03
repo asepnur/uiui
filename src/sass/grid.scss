@@ -103,7 +103,6 @@ samp {
 button,
 input,
 optgroup,
-select,
 textarea {
     color: inherit;
     font: inherit;
@@ -112,10 +111,6 @@ textarea {
 
 button {
     overflow: visible;
-    text-transform: none;
-}
-
-select {
     text-transform: none;
 }
 
@@ -228,15 +223,6 @@ body {
     line-height: 1.42857143;
     color: $hx-black;
     background-color: $hx-white;
-}
-
-input,
-button,
-select,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
 }
 
 a {
